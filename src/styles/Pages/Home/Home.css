@@ -1,0 +1,17 @@
+/* src/pages/Home/home.css */
+.homeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-beige-light);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .birthdayText {
+    font-size: 3.2rem;
+    color: var(--color-black);
+    font-weight: 800;
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  }
