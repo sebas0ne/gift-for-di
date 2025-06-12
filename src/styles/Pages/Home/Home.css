@@ -18,17 +18,55 @@
   }
   
   .birthdayText {
-    font-size: 2.4rem;
-    text-transform: uppercase;
+    font-size: 3rem;
     font-weight: 900;
     color: var(--color-black);
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1rem;
+  }
+  
+  .bounceLetter {
+    display: inline-block;
   }
   
   .homeFooter {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: 1.5rem;
   }
   
+  .cornerEyeButton {
+    position: fixed;
+    top: -10px;
+    right: -10px;
+    z-index: 10;
+  }
+
+  .eyeButton {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-black);
+    color: var(--color-beige-light);
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translate(-5%, 0%);
+    cursor: pointer;
+    transition: border-radius 0.4s ease, transform 0.4s ease;
+    overflow: hidden;
+  
+  }
+
+  .eyeButton:hover {
+    border-radius: 20% 40% 40% 80% / 70% 30% 90% 60%;
+    transform: translate(-10%, 10%) scale(1.02);
+  }
