@@ -1,17 +1,34 @@
-/* src/pages/Home/home.css */
+/* src/styles/Pages/Home/Home.css */
+
 .homeContainer {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
     background-color: var(--color-beige-light);
-    padding: 2rem;
-    text-align: center;
+  }
+  
+  .homeContent {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
   .birthdayText {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 900;
     color: var(--color-black);
-    font-weight: 800;
-    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
+  
+  .homeFooter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+  }
+  
