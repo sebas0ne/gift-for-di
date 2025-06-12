@@ -6,6 +6,7 @@ import './styles/variables.css';
 
 import CircularTextLoader from './components/common/CircularTextLoader';
 import Home from './pages/Home/Home';
+import About from './pages/About';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +24,7 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         )}
       </div>
