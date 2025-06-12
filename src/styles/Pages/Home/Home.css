@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--color-beige-light);
+    background-color: var(--color-black);
   }
   
   .homeContent {
@@ -20,7 +20,7 @@
   .birthdayText {
     font-size: 3rem;
     font-weight: 900;
-    color: var(--color-black);
+    color: var(--color-white);
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -49,8 +49,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: var(--color-black);
-    color: var(--color-beige-light);
+    background-color: var(--color-white);
+    color: var(--color-black);
     border: none;
     outline: none;
     position: relative;
