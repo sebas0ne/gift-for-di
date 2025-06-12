@@ -1,0 +1,16 @@
+/* src/styles/common/daysTogether.css */
+.daysTogether {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: 0;
+    padding-bottom: 2rem;
+    color: var(--color-black);
+    font-weight: 600;
+  }
+  
+  .daysTogether span {
+    color: var(--color-beige-dark);
+    font-weight: 700;
+  }
+  
