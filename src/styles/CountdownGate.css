@@ -1,0 +1,91 @@
+/* rc/styles/CountdownGate.css */
+
+.countdown-gate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #c8ad7f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Dancing Script' o 'Parisienne';
+    color: #000;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .title-countdown {
+    top: 0;
+    display: flex;
+  }
+
+  .countdown-gate h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  .countdown {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    animation: flip 1s infinite alternate;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+    font-size: 3rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card-back {
+    transform: rotateX(180deg);
+  }
+
+  @keyframes flip {
+    from {
+      transform: rotateX(0deg);
+    }
+    to {
+      transform: rotateX(180deg);
+    }
+  }
+
+  .countdown-item span {
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 900;
+  }

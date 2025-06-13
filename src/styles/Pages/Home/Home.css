@@ -1,33 +1,37 @@
 /* src/styles/Pages/Home/Home.css */
 
 .homeContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    background-color: var(--color-black);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-beige-dark);
+}
   
-  .homeContent {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .birthdayText {
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--color-white);
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.1rem;
-  }
-  
+.homeContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.homeContent.hiddenText {
+  display: none;
+}
+
+.birthdayText {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
   .bounceLetter {
     display: inline-block;
   }
@@ -36,104 +40,163 @@
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-  
-  .cornerEyeButton {
-    position: fixed;
-    top: -10px;
-    right: -10px;
-    z-index: 10;
-  }
-
-  .eyeButton {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border: none;
-    outline: none;
+    align-items: center;
+    padding: 2rem 1rem;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transform: translate(-5%, 0%);
-    cursor: pointer;
-    transition: border-radius 0.4s ease, transform 0.4s ease;
-    overflow: hidden;
+    z-index: 2;
+    animation: fadeInUp 1.2s ease-out;
+  }
   
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
-  .eyeButton:hover {
-    border-radius: 20% 40% 40% 80% / 70% 30% 90% 60%;
-    transform: translate(-10%, 10%) scale(1.02);
-  }
+.homeFooter.hiddenText {
+  display: none;
+}
+  
+.cornerEyeButton {
+  position: fixed;
+  top: -10px;
+  right: -10px;
+  z-index: 10;
+}
 
-  .heartbeat {
-    animation: heartbeatBackground 0.6s ease-in-out infinite;
+.cornerHeartButton {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  z-index: 10;
+}
+
+.eyeButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translate(-5%, 0%);
+  cursor: pointer;
+  transition: border-radius 0.4s ease, transform 0.4s ease;
+  overflow: hidden;
+}
+
+.eyeButton:hover {
+  border-radius: 20% 40% 40% 80% / 70% 30% 90% 60%;
+  transform: translate(-10%, 10%) scale(1.02);
+}
+
+.heartbeatHeart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 180px;
+  background: #fa314f;
+  position: fixed;
+  z-index: 100;
+  animation: pulse 1s ease-in-out infinite;
+  clip-path: path("M 100 30 C 100 0, 0 0, 0 60 C 0 110, 100 180, 100 180 C 100 180, 200 110, 200 60 C 200 0, 100 0, 100 30 Z");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heartbeatText {
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
   }
-  
-  @keyframes heartbeatBackground {
-    0%, 100% {
-      background-color: #ffb5bd;
-    }
-    25% {
-      background-color: #f9808f;
-    }
-    50% {
-      background-color: #f96981;
-    }
-    75% {
-      background-color: #fd5064;
-    }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
   }
-  
-  .heartbeatHeart {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 180px;
-    background: #fa314f;
-    position: fixed;
-    z-index: 100;
-    animation: pulse 1s ease-in-out infinite;
-    clip-path: path("M 100 30 C 100 0, 0 0, 0 60 C 0 110, 100 180, 100 180 C 100 180, 200 110, 200 60 C 200 0, 100 0, 100 30 Z");
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
-  
-  .heartbeatText {
-    color: white;
-    font-size: 0.9rem;
-    text-align: center;
-    font-weight: bold;
-    padding: 1rem;
+}
+
+.expandedButtons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: 9;
+}
+
+/* Modo mágico */
+.homeContainer.magic-mode {
+  background-color: var(--color-black);
+}
+
+.homeContainer.magic-mode .homeFooter .daysTogether span{
+  color: var(--color-beige-dark);
+}
+
+
+.enhanced-title {
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px var(--shadow-light);
+  letter-spacing: 2px;
+}
+
+.floatingParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: fixed;
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.heartbeat {
+  animation: heartbeatBackground 0.6s ease-in-out infinite;
+}
+
+@keyframes heartbeatBackground {
+  0%, 100% {
+    background-color: #ffb5bd;
+    transform: scale(1);
   }
-  
-  @keyframes pulse {
-    0% {
-      transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(1);
-    }
+  25% {
+    background-color: #f9808f;
   }
-  
-  
-  .expandedButtons {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    z-index: 9;
+  50% {
+    background-color: #f96981;
+    transform: scale(1.02);
   }
-  
+  75% {
+    background-color: #fd5064;
+  }
+}
