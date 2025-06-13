@@ -1,0 +1,69 @@
+/* src/styles/animations/BackgroundAnimation.css */
+.backgroundAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floatingDot {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  animation: floatingDots 12s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+.floatingDot:nth-child(1n) {
+  background-color: var(--green-dark);
+}
+.floatingDot:nth-child(2n) {
+  background-color: var(--green-light);
+}
+.floatingDot:nth-child(3n) {
+  background-color: var(--purple-light);
+}
+.floatingDot:nth-child(4n) {
+  background-color: var(--accent-blue);
+}
+.floatingDot:nth-child(5n) {
+  background-color: var(--love-red);
+}
+.floatingDot:nth-child(6n) {
+  background-color: var(--color-gray);
+}
+.floatingDot:nth-child(7n) {
+  background-color: var(--color-white);
+}
+.floatingDot:nth-child(8n) {
+  background-color: var(--purple-dark);
+}
+.floatingDot:nth-child(9n) {
+  background-color: var(--accent-blue-dark);
+}
+
+.floatingDot:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.floatingDot:nth-child(2) { top: 30%; left: 70%; animation-delay: 2s; }
+.floatingDot:nth-child(3) { top: 60%; left: 10%; animation-delay: 4s; }
+.floatingDot:nth-child(4) { top: 80%; left: 50%; animation-delay: 6s; }
+.floatingDot:nth-child(5) { top: 15%; left: 40%; animation-delay: 1s; }
+.floatingDot:nth-child(6) { top: 55%; left: 95%; animation-delay: 3s; }
+.floatingDot:nth-child(7) { top: 75%; left: 25%; animation-delay: 5s; }
+.floatingDot:nth-child(8) { top: 50%; left: 60%; animation-delay: 7s; }
+.floatingDot:nth-child(9) { top: 25%; left: 75%; animation-delay: 8s; }
+
+@keyframes floatingDots {
+  0%, 100% { 
+    transform: translateY(0px) scale(0.8);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-30px) scale(1.2);
+    opacity: 1;
+  }
+}

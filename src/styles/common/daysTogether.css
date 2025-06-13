@@ -1,16 +1,34 @@
 /* src/styles/common/daysTogether.css */
+
 .daysTogether {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin-top: 0;
-    padding-bottom: 2rem;
-    color: var(--color-white);
-    font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: floatUp 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.daysTogether span {
+  color: var(--color-black);
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-shadow: 0 0 5px var(--shadow-light);
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0px);
   }
-  
-  .daysTogether span {
-    color: var(--color-beige-dark);
-    font-weight: 700;
+  50% {
+    transform: translateY(-5px);
   }
-  
+}

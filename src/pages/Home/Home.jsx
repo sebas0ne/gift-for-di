@@ -1,18 +1,24 @@
 // src/pages/Home/Home.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Eye, Heart, Star, Music, Smile } from 'lucide-react';
+import { Eye, Heart, Star, Image, Moon, HandHeart } from 'lucide-react';
 import DaysTogether from '../../components/common/DaysTogether';
 import AnimatedLayout from '../../layouts/AnimatedLayout';
+
+import BackgroundAnimation from '../../components/animations/BackgroundAnimation';
+import FloatingParticles from '../../components/effects/FloatingParticles';
+import EffectMessage from '../../components/effects/EffectMessage';
+
 import CONSTANT from '../../utils/constant';
 import '../../styles/Pages/Home/Home.css';
 
 function Home() {
-  const navigate = useNavigate();
   const [showButtons, setShowButtons] = useState(false);
   const [heartbeat, setHeartbeat] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
+  const [activeEffect, setActiveEffect] = useState(null);
+  const [magicMode, setMagicMode] = useState(false);
+  const [showElement, setShowElement] = useState(false);
 
   const toggleButtons = () => {
     setShowButtons((prev) => !prev);
@@ -21,27 +27,64 @@ function Home() {
   const handleHeartbeat = () => {
     setHeartbeat(true);
     setShowMessage(true);
+    setShowElement(true);
 
     setTimeout(() => {
       setHeartbeat(false);
-    }, 2000);
+      setShowElement(false);
+    }, 3000);
 
     setTimeout(() => {
       setShowMessage(false);
+    }, 3000);
+  };
+
+  const handleHeartbeatEffect = () => {
+    setActiveEffect('hearts');
+
+    setTimeout(() => {
+      setActiveEffect(null);
+    }, 6000);
+  };
+
+  const handleStarWish = () => {
+    setActiveEffect('stars');
+    
+    setTimeout(() => {
+      setActiveEffect(null);
+    }, 6000);
+  };
+
+  const handleMagicMode = () => {
+    setMagicMode(!magicMode);
+    
+    setTimeout(() => {
+
     }, 2000);
   };
 
   const buttonIcons = [
-    { icon: <Heart size={20} />, label: 'Love', onClick: handleHeartbeat },
-    { icon: <Star size={20} />, label: 'Wish' },
-    { icon: <Music size={20} />, label: 'Tune' },
-    { icon: <Smile size={20} />, label: 'Surprise' },
+    { icon: <HandHeart size={20} />, label: 'HandHeart', onClick: handleHeartbeatEffect },
+    { icon: <Star size={20} />, label: 'Tune', onClick: handleStarWish },
+    { icon: <Image size={20} />, label: 'Party' },
+    { icon: <Moon size={20} />, label: 'Surprise', onClick: handleMagicMode },
   ];
 
   return (
     <AnimatedLayout transitionName="bounceUp">
-      <div className={`homeContainer ${heartbeat ? 'heartbeat' : ''}`}>
-        <div className="cornerEyeButton">
+      <div className={`homeContainer ${heartbeat ? 'heartbeat' : ''} ${magicMode ? 'magic-mode' : ''}`}>
+
+      <BackgroundAnimation />
+
+        {activeEffect === 'hearts' && <FloatingParticles type="hearts" count={80} />}
+        {activeEffect === 'stars' && <FloatingParticles type="stars" count={80} />}
+
+        <div className="cornerHeartButton">
+          <button className="eyeButton" onClick={handleHeartbeat}>
+            <Heart size={24} />
+          </button>
+        </div>
+        <div className="cornerEyeButton" hidden={showElement ? true : false}>
           <button className="eyeButton" onClick={toggleButtons}>
             <Eye size={24} />
           </button>
@@ -55,7 +98,7 @@ function Home() {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
               >
-                {buttonIcons.map(({ icon, label, onClick }, index) => (
+                {buttonIcons.map(({ icon, label, onClick }) => (
                   <motion.button
                     key={label}
                     className="eyeButton"
@@ -73,8 +116,8 @@ function Home() {
           </AnimatePresence>
         </div>
 
-        <div className="homeContent">
-          <h1 className="birthdayText">
+        <div className={`homeContent ${showElement ? 'hiddenText' : ''}`}>
+          <h1 className="birthdayText enhanced-title">
             {CONSTANT.home.text.split('').map((char, index) => (
               <motion.span
                 key={index}
@@ -94,24 +137,6 @@ function Home() {
           </h1>
         </div>
 
-        <button
-          onClick={() => navigate('/about')}
-          style={{
-            position: 'absolute',
-            top: 20,
-            left: 20,
-            padding: '0.5rem 1rem',
-            border: 'none',
-            borderRadius: '8px',
-            background: 'black',
-            color: 'white',
-            cursor: 'pointer',
-            zIndex: 10,
-          }}
-        >
-          Ir a About
-        </button>
-
         {showMessage && (
           <motion.div
             className="heartbeatHeart"
@@ -121,16 +146,28 @@ function Home() {
             transition={{ duration: 0.5 }}
           >
             <div className="heartbeatText">
-              Mi corazón late por ti todos los días.
+              {CONSTANT.heartText}
             </div>
           </motion.div>
         )}
 
-        <div className="homeFooter">
+        {activeEffect === 'hearts' && (
+          <EffectMessage message={CONSTANT.effectsMessage.hearts} />
+        )}
+
+        {activeEffect === 'stars' && (
+          <EffectMessage message={CONSTANT.effectsMessage.stars} />
+        )}
+
+        {magicMode && (
+           <EffectMessage message={CONSTANT.effectsMessage.goodNight} />
+        )}
+
+        <div className={`homeFooter ${showElement ? 'hiddenText' : ''}`}>
           <DaysTogether
             textPrincipal={CONSTANT.home.principal}
             textSecondary={CONSTANT.home.secondary}
-            startDate={CONSTANT.home.birthdayDate}
+            startDate={CONSTANT.daysTogether}
           />
         </div>
       </div>

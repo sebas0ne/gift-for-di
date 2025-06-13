@@ -1,0 +1,23 @@
+/* src/styles/effects/EffectMessage.css */
+
+.effectMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.25);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  width: min(90vw, 400px);
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: pop 0.5s ease;
+  z-index: 999;
+}
+
+@keyframes pop {
+  from { transform: translate(-50%, -50%) scale(0.9); opacity: 0; }
+  to   { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
