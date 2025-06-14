@@ -26,32 +26,31 @@ function Home() {
 
   const handleHeartbeat = () => {
     setHeartbeat(true);
-    setShowMessage(true);
     setShowElement(true);
 
     setTimeout(() => {
       setHeartbeat(false);
       setShowElement(false);
     }, 3000);
-
-    setTimeout(() => {
-      setShowMessage(false);
-    }, 3000);
   };
 
   const handleHeartbeatEffect = () => {
+    setShowMessage(true);
     setActiveEffect('hearts');
 
     setTimeout(() => {
       setActiveEffect(null);
+      setShowMessage(false);
     }, 6000);
   };
 
   const handleStarWish = () => {
+    setShowMessage(true);
     setActiveEffect('stars');
     
     setTimeout(() => {
       setActiveEffect(null);
+      setShowMessage(false);
     }, 6000);
   };
 
@@ -77,9 +76,9 @@ function Home() {
       <BackgroundAnimation />
 
         {activeEffect === 'hearts' && <FloatingParticles type="hearts" count={80} />}
-        {activeEffect === 'stars' && <FloatingParticles type="stars" count={80} />}
+        {activeEffect === 'stars' && <FloatingParticles type="stars" count={100} />}
 
-        <div className="cornerHeartButton">
+        <div className="cornerHeartButton" hidden={magicMode ? true : false}>
           <button className="eyeButton" onClick={handleHeartbeat}>
             <Heart size={24} />
           </button>
@@ -137,7 +136,7 @@ function Home() {
           </h1>
         </div>
 
-        {showMessage && (
+        {heartbeat && (
           <motion.div
             className="heartbeatHeart"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -160,7 +159,7 @@ function Home() {
         )}
 
         {magicMode && (
-           <EffectMessage message={CONSTANT.effectsMessage.goodNight} />
+           <EffectMessage message={CONSTANT.effectsMessage.goodNight} nameClass={showMessage} />
         )}
 
         <div className={`homeFooter ${showElement ? 'hiddenText' : ''}`}>

@@ -2,9 +2,9 @@
 import React from 'react';
 import '../../styles/effects/EffectMessage.css';
 
-const EffectMessage = ({ message }) => {
+const EffectMessage = ({ message, nameClass}) => {
   return (
-    <div className="effectMessage">
+    <div className={`effectMessage ${nameClass ? 'messageHidden' : ''}`}>
       {message}
     </div>
   );
