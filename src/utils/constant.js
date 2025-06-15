@@ -9,7 +9,7 @@ const constant =  {
     "stars": "Un amor eterno, como las estrellas en el universo.",
     "goodNight": "De pronto es de noche, buenas noches mi amor!"
   },
-  "birthdayDate": "2025-07-01",
+  "birthdayDate": "2025-06-01",
   "daysTogether": "2023-10-21",
   "loaderText": "* MI AMOR * FELIZ CUMPLEAÑOS *",
   "heartText": "Mi corazón late por ti todos los días."

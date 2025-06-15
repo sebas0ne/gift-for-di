@@ -1,3 +1,4 @@
+// src/pages/CountdownGate.jsx
 import { useState, useEffect, useCallback } from 'react';
 import { gsap } from 'gsap';
 import CircularText from "../components/animations/CircularText";

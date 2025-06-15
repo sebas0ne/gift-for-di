@@ -8,6 +8,7 @@ import AnimatedLayout from '../../layouts/AnimatedLayout';
 import BackgroundAnimation from '../../components/animations/BackgroundAnimation';
 import FloatingParticles from '../../components/effects/FloatingParticles';
 import EffectMessage from '../../components/effects/EffectMessage';
+import PolaroidDisplay from '../../components/common/PolaroidDisplay';
 
 import CONSTANT from '../../utils/constant';
 import '../../styles/Pages/Home/Home.css';
@@ -19,6 +20,11 @@ function Home() {
   const [activeEffect, setActiveEffect] = useState(null);
   const [magicMode, setMagicMode] = useState(false);
   const [showElement, setShowElement] = useState(false);
+  const [showPolaroid, setShowPolaroid] = useState(false);
+
+  const handleShowPolaroid = () => {
+    setShowPolaroid(true);
+  };
 
   const toggleButtons = () => {
     setShowButtons((prev) => !prev);
@@ -64,9 +70,9 @@ function Home() {
 
   const buttonIcons = [
     { icon: <HandHeart size={20} />, label: 'HandHeart', onClick: handleHeartbeatEffect },
-    { icon: <Star size={20} />, label: 'Tune', onClick: handleStarWish },
-    { icon: <Image size={20} />, label: 'Party' },
-    { icon: <Moon size={20} />, label: 'Surprise', onClick: handleMagicMode },
+    { icon: <Star size={20} />, label: 'Star', onClick: handleStarWish },
+    { icon: <Image size={20} />, label: 'Image', onClick: handleShowPolaroid },
+    { icon: <Moon size={20} />, label: 'Moon', onClick: handleMagicMode },
   ];
 
   return (
@@ -169,6 +175,7 @@ function Home() {
             startDate={CONSTANT.daysTogether}
           />
         </div>
+        <PolaroidDisplay isVisible={showPolaroid} onClose={() => setShowPolaroid(false)} />
       </div>
     </AnimatedLayout>
   );

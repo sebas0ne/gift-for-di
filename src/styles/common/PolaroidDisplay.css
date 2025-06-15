@@ -1,0 +1,48 @@
+/* components/PolaroidDisplay.css */
+
+.polaroidBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+  }
+  
+  .polaroidContainer {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+    pointer-events: none; /* Para que el fondo reciba los clicks */
+  }
+
+  .polaroid {
+    pointer-events: all; /* Permite interacción solo con la polaroid */
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 280px;
+    max-width: 90vw;
+  }
+  
+  .polaroidImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .polaroidCaption {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #222;
+    font-weight: 500;
+  }
+  
