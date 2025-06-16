@@ -23,8 +23,16 @@ function Home() {
   const [showPolaroid, setShowPolaroid] = useState(false);
 
   const handleShowPolaroid = () => {
+    setShowElement(true);
+    setShowMessage(true);
     setShowPolaroid(true);
   };
+
+  const handleOnClosePolaroid = () => {
+    setShowPolaroid(false)
+    setShowElement(false);
+    setShowMessage(false);
+  }
 
   const toggleButtons = () => {
     setShowButtons((prev) => !prev);
@@ -175,7 +183,7 @@ function Home() {
             startDate={CONSTANT.daysTogether}
           />
         </div>
-        <PolaroidDisplay isVisible={showPolaroid} onClose={() => setShowPolaroid(false)} />
+        <PolaroidDisplay isVisible={showPolaroid} onClose={handleOnClosePolaroid} />
       </div>
     </AnimatedLayout>
   );

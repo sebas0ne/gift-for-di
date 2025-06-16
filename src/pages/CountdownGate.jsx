@@ -3,6 +3,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { gsap } from 'gsap';
 import CircularText from "../components/animations/CircularText";
 import FlipUnit from "../components/animations/FlipUnit"
+
+import CONSTANT from '../utils/constant';
 import '../styles/Pages/CountdownGate.css';
 
 function CountdownGate({ targetDate, onComplete }) {
@@ -62,7 +64,7 @@ function CountdownGate({ targetDate, onComplete }) {
     <div className="countdownGate">
       <div className="titleCountdown">
         <CircularText
-          text="* ESTE REGALO * SE DESBLOQUEA * EN "
+          text={CONSTANT.titleCountdown}
           onHover="pause"
           spinDuration={10}
           className="countdown"

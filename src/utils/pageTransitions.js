@@ -57,6 +57,5 @@ const pageTransitions = {
       transition: { duration: 0.6, ease: 'easeInOut' }
     },
   };
-  
-  export default pageTransitions;
-  
+
+export default pageTransitions;

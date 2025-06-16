@@ -1,32 +1,57 @@
-// components/PolaroidDisplay.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { subtractDatesInDays, getTodayKey } from '../../utils/handlingDates';
+
+import CONSTANT from '../../utils/constant';
 import '../../styles/common/PolaroidDisplay.css';
 
-const polaroids = [
-  {
-    src: '/images/cita-en-mac-1.png',
-    description: 'Una cita especial.',
-  },
-  {
-    src: '/images/primera-navidad-2.png',
-    description: 'Nuestra primera navidad.',
-  },
-  {
-    src: '/images/primera-cita-1.png',
-    description: 'Primera Cita.',
-  }
-];
-
 const PolaroidDisplay = ({ isVisible, onClose }) => {
-  const randomIndex = Math.floor(Math.random() * polaroids.length);
-  const { src, description } = polaroids[randomIndex];
+  const [currentPolaroid, setCurrentPolaroid] = useState(null);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const storedData = JSON.parse(localStorage.getItem('polaroidTracker')) || undefined;
+    const todayKey = getTodayKey();
+    let tracker = storedData;
+    const lastDayKey = tracker ? tracker.lastDay : todayKey;
+    const diffDays = subtractDatesInDays(todayKey,lastDayKey);
+
+    if (tracker === undefined) {
+      tracker = {
+        countDaily: 0,
+        count: 0,
+        lastDay: todayKey
+      };
+      localStorage.setItem('polaroidTracker', JSON.stringify(tracker));
+    }
+    if (diffDays > 0) {
+      tracker.countDaily = 0;
+    }
+    if (tracker.count === CONSTANT.polaroids.length) {
+      tracker.count = 0;
+    }
+    if (tracker.countDaily < CONSTANT.maxImgDaily) {
+      const polaroidToShow = CONSTANT.polaroids[tracker.count];
+        tracker.countDaily++;
+        tracker.count++;
+        tracker.lastDay = todayKey;
+        tracker = {
+          countDaily: tracker.countDaily,
+          count: tracker.count,
+          lastDay: tracker.lastDay
+        };
+        localStorage.setItem('polaroidTracker', JSON.stringify(tracker));
+        setCurrentPolaroid(polaroidToShow);
+    } else {
+      setCurrentPolaroid(CONSTANT.defaultImage);
+    }
+  }, [isVisible]);
 
   return (
     <AnimatePresence>
-      {isVisible && (
+      {isVisible && currentPolaroid && (
         <>
-          {/* Fondo difuminado */}
           <motion.div
             className="polaroidBackdrop"
             initial={{ opacity: 0 }}
@@ -35,7 +60,6 @@ const PolaroidDisplay = ({ isVisible, onClose }) => {
             onClick={onClose}
           />
 
-          {/* Polaroid centrado */}
           <motion.div
             className="polaroidContainer"
             initial={{ scale: 0.8, opacity: 0, rotate: -10 }}
@@ -44,8 +68,8 @@ const PolaroidDisplay = ({ isVisible, onClose }) => {
             transition={{ duration: 0.5, type: 'spring' }}
           >
             <div className="polaroid">
-              <img src={src} alt="Polaroid" className="polaroidImage" />
-              <p className="polaroidCaption">{description}</p>
+              <img src={currentPolaroid.src} alt="Polaroid" className="polaroidImage" />
+              <p className="polaroidCaption">{currentPolaroid.description}</p>
             </div>
           </motion.div>
         </>
