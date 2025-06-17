@@ -11,7 +11,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   animation: floatUp 3s ease-in-out infinite;
   transition: transform 0.3s ease;
-  max-width: 90%;
   text-align: center;
   position: relative;
   text-transform: uppercase;

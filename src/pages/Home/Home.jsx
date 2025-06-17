@@ -1,5 +1,6 @@
 // src/pages/Home/Home.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Heart, Star, Image, Moon, HandHeart } from 'lucide-react';
 import DaysTogether from '../../components/common/DaysTogether';
@@ -21,6 +22,7 @@ function Home() {
   const [magicMode, setMagicMode] = useState(false);
   const [showElement, setShowElement] = useState(false);
   const [showPolaroid, setShowPolaroid] = useState(false);
+  const navigate = useNavigate();
 
   const handleShowPolaroid = () => {
     setShowElement(true);
@@ -70,17 +72,17 @@ function Home() {
 
   const handleMagicMode = () => {
     setMagicMode(!magicMode);
-    
-    setTimeout(() => {
+  };
 
-    }, 2000);
+  const handleNavigation = (path) => {
+    navigate(path);
   };
 
   const buttonIcons = [
     { icon: <HandHeart size={20} />, label: 'HandHeart', onClick: handleHeartbeatEffect },
     { icon: <Star size={20} />, label: 'Star', onClick: handleStarWish },
     { icon: <Image size={20} />, label: 'Image', onClick: handleShowPolaroid },
-    { icon: <Moon size={20} />, label: 'Moon', onClick: handleMagicMode },
+    { icon: <Moon size={20} />, label: 'Moon', onClick: () => handleNavigation('/movies') },
   ];
 
   return (

@@ -1,0 +1,23 @@
+.pageTitle {
+    margin: 0;
+    padding: 0.5em 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    line-height: 1.2;
+    text-align: left;
+  }
+  
+  @media (max-width: 768px) {
+    .pageTitle {
+      font-size: 1.8rem !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pageTitle {
+      font-size: 1.6rem !important;
+      text-align: center;
+    }
+  }
+  
