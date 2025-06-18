@@ -40,7 +40,11 @@
   }
   
   .item.selected {
-    background-color: #271E37;
+    background-color: var(--color-white);
+  }
+
+  .item-text.selected {
+    color:  var(--color-black);
   }
   
   .item-text {

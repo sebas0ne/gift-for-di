@@ -118,7 +118,7 @@ const AnimatedList = ({
             }}
           >
             <div className={`item ${selectedIndex === index ? 'selected' : ''} ${itemClassName}`}>
-              <p className="item-text">{item}</p>
+              <p className={`item-text ${selectedIndex === index ? 'selected' : ''}`}>{item.title}</p>
             </div>
           </AnimatedItem>
         ))}
