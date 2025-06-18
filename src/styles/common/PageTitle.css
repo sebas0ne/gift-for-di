@@ -16,7 +16,6 @@
   
   @media (max-width: 480px) {
     .pageTitle {
-      font-size: 1.6rem !important;
       text-align: center;
     }
   }

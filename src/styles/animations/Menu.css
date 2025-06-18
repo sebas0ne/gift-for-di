@@ -1,0 +1,79 @@
+/* src/styles/commons/Menu.css */
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-icon {
+  position: fixed;
+  top: 0.5rem;
+  z-index: 1100;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-white);
+}
+
+.menu-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  background-color: rgba(var(--color-beige-dark-rgba), 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: opacity, transform;
+  z-index: 1001;
+  pointer-events: auto;
+}
+
+.overlay-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.overlay-menu li {
+  font-size: 3rem;
+  margin: 3rem 0;
+  color: var(--color-white);
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.overlay-menu li.active {
+  color: var(--color-black);
+  transform: scale(1.15);
+  position: relative;
+}
+
+.overlay-menu li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: var(--color-black);
+  border-radius: 2px;
+}

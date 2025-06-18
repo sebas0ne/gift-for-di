@@ -28,7 +28,6 @@ const AnimatedList = ({
     'Item 11', 'Item 12', 'Item 13', 'Item 14', 'Item 15'
   ],
   onItemSelect,
-  showGradients = true,
   enableArrowNavigation = true,
   className = '',
   itemClassName = '',
@@ -38,17 +37,6 @@ const AnimatedList = ({
   const listRef = useRef(null);
   const [selectedIndex, setSelectedIndex] = useState(initialSelectedIndex);
   const [keyboardNav, setKeyboardNav] = useState(false);
-  const [topGradientOpacity, setTopGradientOpacity] = useState(0);
-  const [bottomGradientOpacity, setBottomGradientOpacity] = useState(1);
-
-  const handleScroll = (e) => {
-    const { scrollTop, scrollHeight, clientHeight } = e.target;
-    setTopGradientOpacity(Math.min(scrollTop / 50, 1));
-    const bottomDistance = scrollHeight - (scrollTop + clientHeight);
-    setBottomGradientOpacity(
-      scrollHeight <= clientHeight ? 0 : Math.min(bottomDistance / 50, 1)
-    );
-  };
 
   useEffect(() => {
     if (!enableArrowNavigation) return;
@@ -102,7 +90,6 @@ const AnimatedList = ({
       <div
         ref={listRef}
         className={`scroll-list ${!displayScrollbar ? 'no-scrollbar' : ''}`}
-        onScroll={handleScroll}
       >
         {items.map((item, index) => (
           <AnimatedItem
@@ -123,18 +110,6 @@ const AnimatedList = ({
           </AnimatedItem>
         ))}
       </div>
-      {showGradients && (
-        <>
-          <div
-            className="top-gradient"
-            style={{ opacity: topGradientOpacity }}
-          ></div>
-          <div
-            className="bottom-gradient"
-            style={{ opacity: bottomGradientOpacity }}
-          ></div>
-        </>
-      )}
     </div>
   );
 };

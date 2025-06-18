@@ -1,0 +1,128 @@
+/* src/styles/common/TicketCard.css */
+
+.ticketCard {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+  
+  .ticketHeader {
+    width: 100%;
+  }
+  
+  .ticketBanner {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .ticketContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .qrSection {
+    flex: 0.5;
+    display: flex;
+  }
+  
+  .qrImage {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .ticketDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .infoButton {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .infoButton:hover {
+    background-color: #ccc;
+  }
+  
+  .ticketFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .footerColumn {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 140px;
+  }
+  
+  .footerItem {
+    margin-bottom: 12px;
+  }
+  
+  .footerLabel {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #333;
+  }
+  
+  .footerValue {
+    color: #555;
+    font-size: 14px;
+  }
+
+  .progressBarContainer {
+    width: 100%;
+    height: 4px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progressBar {
+    height: 100%;
+    width: 100%;
+    background-color: #00c9b6;
+    animation: fillProgress 5s linear infinite;
+  }
+  
+  @keyframes fillProgress {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footerColumn {
+      width: 100%;
+    }
+  
+    .footerItem {
+      margin-bottom: 10px;
+    }
+  }

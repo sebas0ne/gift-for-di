@@ -34,23 +34,24 @@
   
   .item {
     padding: 16px;
-    background-color: var(--color-black);
+    background-color: var(--color-white);
     border-radius: 8px;
     margin-bottom: 1rem;
   }
   
   .item.selected {
-    background-color: var(--color-white);
+    background-color: var(--color-black);
   }
 
   .item-text.selected {
-    color:  var(--color-black);
+    color: var(--color-white);
   }
   
   .item-text {
-    color: white;
+    color: var(--color-black);
     margin: 0;
-    font-size: 11px;
+    font-size: 1.1rem;
+    font-weight: 600;
   }
   
   .top-gradient {

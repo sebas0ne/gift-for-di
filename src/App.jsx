@@ -8,6 +8,7 @@ import CircularTextLoader from './components/common/CircularTextLoader';
 import CountdownGate from './pages/CountdownGate';
 import Home from './pages/Home/Home';
 import Movies from './pages/Movies';
+import Gift from './pages/Gift';
 
 import CONSTANT from './utils/constant';
 
@@ -35,6 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<Movies />} />
+            <Route path="/gift" element={<Gift />} />
           </Routes>
         )}
       </>

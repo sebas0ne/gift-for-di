@@ -23,12 +23,24 @@ const constant =  {
   },
   "polaroids": [
     {
+      "src": "/images/sebas-di-ceatd-1.png",
+      "description": "Espero recuerdes esta foto, tiene unos cuantos detalles...",
+    },
+    {
+      "src": "/images/sebas-di-jurassic-park.png",
+      "description": "Salimos de aventuras al Parque Jurásico.",
+    },
+    {
+      "src": "/images/sebas-di-manos-en-el-auto.png",
+      "description": "Vaya día no... estoy seguro que con esta foto lo recuerdas.",
+    },
+    {
       "src": "/images/viaje-a-chancay-1.png",
       "description": "Viaje a castillo de Chancay estilo DreamWorks.",
     },
     {
       "src": "/images/sebas-y-di-playa-3.png",
-      "description": "Nosotros en la playa estilo GTA.",
+      "description": "Nosotros, playita al mero estilo de GTA.",
     },
     {
       "src": "/images/sebas-y-di-potter-1.png",
@@ -44,7 +56,7 @@ const constant =  {
     },
     {
       "src": "/images/primera-cita-1.png",
-      "description": "Primera Cita.",
+      "description": "Nuesta primera Cita.",
     },
   ],
   "pageTitleMovies": "Peliculas que hemos visto juntos en el cine:",
@@ -137,6 +149,33 @@ const constant =  {
     { "title": "86: Mission Impossible Sentencia final", "image": "/images/movies/85.webp"},
     { "title": "87: Encerrado", "image": "/images/movies/86.webp"},
     { "title": "88: Bailarina", "image": "/images/movies/87.webp"},
+  ],
+  "itemsMenu": [
+    { "label": 'INICIO', "path": '/' },
+    { "label": 'PELICULAS', "path": '/movies' },
+    { "label": 'REGALO', "path": '/gift' },
+    { "label": 'COSAS QUE AMO DE TI', "path": '/thingsAboutYou' },
+    { "label": 'POR QUÉ TE AMO?', "path": '/whyLoveYo' }
+  ],
+  "gitTitle": "Tenemos una cita esperandonos en el 2026...",
+  "qrImages": [
+    "/images/dbtmFQr/1-NUEVAYoL.png",
+    "/images/dbtmFQr/2-VOY-A-LLeVARTE-PA-PR.png",
+    "/images/dbtmFQr/3-BAILE-INoLVIDABLE.png",
+    "/images/dbtmFQr/4-PERFuMITO-NUEVO.png",
+    "/images/dbtmFQr/5-WELTiTA.png",
+    "/images/dbtmFQr/6-VeLDA.png",
+    "/images/dbtmFQr/7-EL-CLuB.png",
+    "/images/dbtmFQr/8-KETU-TeCRE.png",
+    "/images/dbtmFQr/9-BOKeTE.png",
+    "/images/dbtmFQr/10-KLOuFRENS.png",
+    "/images/dbtmFQr/11-TURiSTA.png",
+    "/images/dbtmFQr/12-CAFe-CON-RON.png",
+    "/images/dbtmFQr/13-PIToRRO-DE-COCO.png",
+    "/images/dbtmFQr/14-LO-QUE-LE-PASO-A-HAWAii.png",
+    "/images/dbtmFQr/15-EoO.png",
+    "/images/dbtmFQr/16-DtMF.png",
+    "/images/dbtmFQr/17-LA MuDANZA.png",
   ]
 }
 

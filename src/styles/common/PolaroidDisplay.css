@@ -28,7 +28,7 @@
     border-radius: 0.75rem;
     box-shadow: 0 0.75rem 1.6rem rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 280px;
+    width: 320px;
     max-width: 90vw;
   }
   
@@ -43,5 +43,5 @@
     margin-top: 0.75rem;
     font-size: 1.3rem;
     color: var(--color-black);
-    font-weight: 900;
+    font-weight: 600;
   }
