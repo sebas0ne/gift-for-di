@@ -1,5 +1,6 @@
 /* src/index.css */
 @import './styles/variables.css';
+@import 'shepherd.js/dist/css/shepherd.css';
 
 html {
   font-size: 62.5%;

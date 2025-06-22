@@ -1,0 +1,127 @@
+/* 1. FUENTE GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+
+/* 2. Paso completo */
+.shepherd-element {
+  font-family: 'IBM Plex Sans', sans-serif;
+  border-radius: 0;
+  border: 2px solid #1b1b1b;
+  box-shadow: none;
+  max-width: 420px;
+  border: solid 4px #16202d;
+  max-width: 300px;
+}
+
+/* 3. Contenido cuadrado y compacto */
+.shepherd-content {
+  border-radius: 5px;
+  outline: none;
+  padding: 0;
+}
+
+.shepherd-header {
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  line-height: 2em;
+  padding: .75rem .75rem 0;
+}
+
+/* 4. Texto del contenido */
+.shepherd-text {
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+/* 5. Flecha (customizada igual que el borde del paso) */
+.shepherd-arrow:after {
+  content: url('/public/images/up-arrow.png');
+  display: inline-block;
+}
+
+
+/* 6. Título (si se usa) */
+.shepherd-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* 7. Botones */
+.shepherd-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.shepherd-button {
+  flex: 1;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-top: 2px solid #1b1b1b;
+  border-right: 2px solid #1b1b1b;
+  border-radius: 0;
+  flex-grow: 1;
+}
+
+/* Botón EXIT */
+.shepherd-button:first-child {
+  background-color: #d7dee3;
+  color: #1b1b1b;
+}
+
+/* Botón NEXT o FINALIZAR */
+.shepherd-button:last-child {
+  background-color: #d7dee3;
+  color: #1b1b1b;
+  border-right: none;
+}
+
+/* Botón único */
+.shepherd-footer .shepherd-button:only-child {
+  background-color: #d7dee3;
+  color: #1b1b1b;
+  border-right: none;
+}
+
+/* Hover */
+.shepherd-button:first-child:hover {
+  background-color: #c8d0d6;
+  color: #1b1b1b;
+}
+.shepherd-button:last-child:hover,
+.shepherd-footer .shepherd-button:only-child:hover {
+  background-color: #006ae6;
+  color: #c8d0d6;
+}
+
+/* Icono cerrar (X) */
+.shepherd-cancel-icon {
+  background: transparent;
+  border: none;
+  color: #808080bf;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  transition: color .5s ease;
+}
+
+.shepherd-cancel-icon:hover {
+  color: #000000bf;
+}
+
+.shepherd-element, .shepherd-element *, .shepherd-element :after, .shepherd-element :before {
+  box-sizing: border-box;
+}

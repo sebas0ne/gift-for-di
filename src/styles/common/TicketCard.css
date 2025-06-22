@@ -46,7 +46,8 @@
   }
   
   .infoButton {
-    background-color: #e0e0e0;
+    background-color: rgb(186, 247, 242, 0.5);
+    color: var(--accent-blue);
     border: none;
     padding: 8px 12px;
     margin-top: 8px;
@@ -54,18 +55,13 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
-  
-  .infoButton:hover {
-    background-color: #ccc;
-  }
-  
+
   .ticketFooter {
     display: flex;
     justify-content: space-between;
     padding: 16px;
     background-color: #f8f8f8;
     border-top: 1px solid #ddd;
-    font-size: 14px;
     flex-wrap: wrap;
     gap: 16px;
   }
@@ -82,15 +78,16 @@
   }
   
   .footerLabel {
-    font-weight: bold;
     display: block;
     margin-bottom: 4px;
-    color: #333;
+    color: var(--color-gray);
+    font-size: 1rem;
   }
-  
+
   .footerValue {
-    color: #555;
-    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-black);
+    font-size: 1.5rem;
   }
 
   .progressBarContainer {
@@ -104,7 +101,7 @@
   .progressBar {
     height: 100%;
     width: 100%;
-    background-color: #00c9b6;
+    background-color: var(--accent-blue);
     animation: fillProgress 5s linear infinite;
   }
   

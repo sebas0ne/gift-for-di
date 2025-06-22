@@ -11,7 +11,7 @@ const constant =  {
     "stars": "Un amor eterno, como las estrellas en el universo.",
     "goodNight": "De pronto es de noche, buenas noches mi amor!"
   },
-  "birthdayDate": "2025-07-01",
+  "birthdayDate": "2025-06-01",
   "daysTogether": "2023-10-21",
   "loaderText": "* MI AMOR * FELIZ CUMPLEAÑOS *",
   "heartText": "Mi corazón late por ti todos los días.",
@@ -155,7 +155,8 @@ const constant =  {
     { "label": 'PELICULAS', "path": '/movies' },
     { "label": 'REGALO', "path": '/gift' },
     { "label": 'COSAS QUE AMO DE TI', "path": '/thingsAboutYou' },
-    { "label": 'POR QUÉ TE AMO?', "path": '/whyLoveYo' }
+    { "label": 'POR QUÉ TE AMO?', "path": '/whyLoveYo' },
+    { "label": 'HOROSCOPO DEL AMOR', "path": '/whyLoveYo' }
   ],
   "gitTitle": "Tenemos una cita esperandonos en el 2026...",
   "qrImages": [
@@ -176,7 +177,36 @@ const constant =  {
     "/images/dbtmFQr/15-EoO.png",
     "/images/dbtmFQr/16-DtMF.png",
     "/images/dbtmFQr/17-LA MuDANZA.png",
-  ]
+  ],
+  "ticket": {
+    "content": {
+      "label": "SECTOR",
+      "value": "ORIENTE",
+      "button": "Más info"
+    },
+    "fotter": {
+      "fee": {
+        "label": "TARIFA",
+        "value": "NORMAL"
+      },
+      "section": {
+        "label": "SECCIÓN",
+        "value": "ORIENTE"
+      },
+      "opening": {
+        "label": "APERTURA",
+        "value": "21:00"
+      },
+      "row": {
+        "label": "FILA",
+        "value": "Sin numerar"
+      },
+      "start": {
+        "label": "INICIO",
+        "value": "21:00"
+      }
+    }
+  }
 }
 
 export default constant;

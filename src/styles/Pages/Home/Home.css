@@ -32,53 +32,53 @@
   gap: 0.1rem;
 }
 
-  .bounceLetter {
-    display: inline-block;
+.bounceLetter {
+  display: inline-block;
+}
+
+.homeFooter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  .homeFooter {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1.2s ease-out;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  @keyframes fadeInUp {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+}
 
 .homeFooter.hiddenText {
   display: none;
 }
-  
+
 .cornerEyeButton {
   position: fixed;
-  top: -10px;
-  right: -10px;
+  top: 10px;
+  right: 10px;
   z-index: 10;
 }
 
 .cornerHeartButton {
   position: fixed;
-  top: -10px;
-  left: -10px;
+  top: 10px;
+  left: 10px;
   z-index: 10;
 }
 
 .eyeButton {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--color-white);
   color: var(--color-black);
@@ -142,7 +142,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 70px;
+  top: 60px;
   right: 0;
   z-index: 9;
 }

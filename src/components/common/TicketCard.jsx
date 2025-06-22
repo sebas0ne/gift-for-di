@@ -10,7 +10,7 @@ const TicketCard = () => {
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentQrIndex((prevIndex) => (prevIndex + 1) % CONSTANT.qrImages.length);
-      }, 5000);
+      }, 4995);
       return () => clearInterval(interval);
     }, []);
 
@@ -39,36 +39,36 @@ const TicketCard = () => {
 
         <div className="ticketDetails">
           <div className="footerItem">
-              <span className="footerLabel">Sector</span>
-              <span className="footerValue">Oriente</span>
-            </div>
-          <button className="infoButton">Más info</button>
+            <span className="footerLabel">{CONSTANT.ticket.content.label}</span>
+            <span className="footerValue">{CONSTANT.ticket.content.value}</span>
+          </div>
+          <button className="infoButton">{CONSTANT.ticket.content.button}</button>
         </div>
       </div>
 
       <div className="ticketFooter">
         <div className="footerColumn">
             <div className="footerItem">
-              <span className="footerLabel">Tarifa</span>
-              <span className="footerValue">Normal</span>
+              <span className="footerLabel">{CONSTANT.ticket.fotter.fee.label}</span>
+              <span className="footerValue">{CONSTANT.ticket.fotter.fee.value}</span>
             </div>
             <div className="footerItem">
-              <span className="footerLabel">Sección</span>
-              <span className="footerValue">Oriente</span>
+              <span className="footerLabel">{CONSTANT.ticket.fotter.section.label}</span>
+              <span className="footerValue">{CONSTANT.ticket.fotter.section.value}</span>
             </div>
             <div className="footerItem">
-              <span className="footerLabel">Apertura</span>
-              <span className="footerValue">21:00</span>
+              <span className="footerLabel">{CONSTANT.ticket.fotter.opening.label}</span>
+              <span className="footerValue">{CONSTANT.ticket.fotter.opening.value}</span>
             </div>
         </div>
         <div className="footerColumn">
             <div className="footerItem">
-              <span className="footerLabel">Fila</span>
-              <span className="footerValue">Sin numerar</span>
+              <span className="footerLabel">{CONSTANT.ticket.fotter.row.label}</span>
+              <span className="footerValue">{CONSTANT.ticket.fotter.row.value}</span>
             </div>
             <div className="footerItem">
-              <span className="footerLabel">Inicio</span>
-              <span className="footerValue">21:00</span>
+              <span className="footerLabel">{CONSTANT.ticket.fotter.start.label}</span>
+              <span className="footerValue">{CONSTANT.ticket.fotter.start.value}</span>
             </div>
         </div>
       </div>
