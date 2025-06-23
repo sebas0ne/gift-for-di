@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 import './index.css';
 import './styles/variables.css';
 
+import AnimatedLayout from './layouts/AnimatedLayout';
+import AnimatedLayoutMenu from './layouts/AnimatedLayoutMenu';
 import CircularTextLoader from './components/common/CircularTextLoader';
 import CountdownGate from './pages/CountdownGate';
 import Home from './pages/Home/Home';
@@ -34,9 +36,9 @@ function App() {
           <CircularTextLoader />
         ) : (
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/movies" element={<Movies />} />
-            <Route path="/gift" element={<Gift />} />
+            <Route path="/" element={<AnimatedLayout><Home /></AnimatedLayout>} />
+            <Route path="/movies" element={<AnimatedLayoutMenu><Movies /></AnimatedLayoutMenu>} />
+            <Route path="/gift" element={<AnimatedLayoutMenu><Gift /></AnimatedLayoutMenu>} />
           </Routes>
         )}
       </>

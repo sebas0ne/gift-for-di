@@ -1,8 +1,6 @@
 // src/pages/Movies.jsx
 import React, { useState } from 'react';
-import AnimatedLayout from '../layouts/AnimatedLayout'
 import PageTitle from '../components/common/PageTitle';
-import Menu from '../components/animations/Menu';
 import AnimatedList from '../components/animations/AnimatedList';
 import PolaroidMovies from '../components/common/PolaroidMovies';
 
@@ -23,9 +21,7 @@ function Movies() {
   }
 
   return (
-    <AnimatedLayout>
       <div className="moviesContainer">
-      <Menu />
         <PageTitle
           text={CONSTANT.pageTitleMovies}
           size="3rem"
@@ -40,7 +36,6 @@ function Movies() {
         />
          {showPolaroidMovie && ( <PolaroidMovies isVisible={showPolaroid} imagesData={showPolaroidMovie} onClose={handleOnClosePolaroid} />) }
       </div>
-    </AnimatedLayout>
   );
 }
 

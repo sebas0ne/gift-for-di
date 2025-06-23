@@ -1,13 +1,15 @@
-// src/layouts/AnimatedLayout.jsx
+// src/layouts/AnimatedLayoutMenu.jsx
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Menu from '../components/animations/Menu';
 import pageTransitions from '../utils/pageTransitions';
 
-function AnimatedLayout({ children, transitionName = 'bounceUp' }) {
+function AnimatedLayoutMenu({ children, transitionName = 'bounceUp' }) {
   const transition = pageTransitions[transitionName];
 
   return (
     <AnimatePresence mode="wait">
+      <Menu />
       <motion.div
         key={window.location.pathname}
         {...transition}
@@ -18,4 +20,4 @@ function AnimatedLayout({ children, transitionName = 'bounceUp' }) {
   );
 }
 
-export default AnimatedLayout;
+export default AnimatedLayoutMenu;

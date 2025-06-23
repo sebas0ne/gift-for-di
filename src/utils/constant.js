@@ -153,10 +153,10 @@ const constant =  {
   "itemsMenu": [
     { "label": 'INICIO', "path": '/' },
     { "label": 'PELICULAS', "path": '/movies' },
-    { "label": 'REGALO', "path": '/gift' },
     { "label": 'COSAS QUE AMO DE TI', "path": '/thingsAboutYou' },
     { "label": 'POR QUÉ TE AMO?', "path": '/whyLoveYo' },
-    { "label": 'HOROSCOPO DEL AMOR', "path": '/whyLoveYo' }
+    { "label": 'HOROSCOPO DEL AMOR', "path": '/loveHoroscope' },
+    { "label": 'REGALO', "path": '/gift' },
   ],
   "gitTitle": "Tenemos una cita esperandonos en el 2026...",
   "qrImages": [

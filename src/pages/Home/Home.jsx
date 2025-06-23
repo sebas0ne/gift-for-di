@@ -2,9 +2,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Heart, Star, Image, Moon, HandHeart, CalendarDays } from 'lucide-react';
+import { Eye, Heart, Star, Image, Moon, HandHeart, CalendarDays, CircleArrowRight } from 'lucide-react';
 import DaysTogether from '../../components/common/DaysTogether';
-import AnimatedLayout from '../../layouts/AnimatedLayout';
 
 import BackgroundAnimation from '../../components/animations/BackgroundAnimation';
 import FloatingParticles from '../../components/effects/FloatingParticles';
@@ -23,7 +22,9 @@ function Home() {
   const [showElement, setShowElement] = useState(false);
   const [showPolaroid, setShowPolaroid] = useState(false);
   const [showDaysText, setShowDaysText] = useState(() => {
-    return localStorage.getItem('showTextDays') === 'true';
+    const storedDate = localStorage.getItem('showTextDaysDate');
+    const today = new Date().toLocaleDateString('sv-SE');
+    return storedDate === today;
   });
   const navigate = useNavigate();
 
@@ -82,19 +83,19 @@ function Home() {
   };
 
   const handleRevealDays = () => {
-    localStorage.setItem('showTextDays', 'true');
+    const today = new Date().toLocaleDateString('sv-SE');
+    localStorage.setItem('showTextDaysDate', today);
     setShowDaysText(true);
   };
 
-  const buttonIcons = [
+  const listButtonIcons = [
     { icon: <HandHeart size={20} />, label: 'HandHeart', onClick: handleHeartbeatEffect },
     { icon: <Star size={20} />, label: 'Star', onClick: handleStarWish },
     { icon: <Image size={20} />, label: 'Image', onClick: handleShowPolaroid },
-    { icon: <Moon size={20} />, label: 'Moon', onClick: () => handleNavigation('/movies') },
+    { icon: <Moon size={20} />, label: 'Moon', onClick: handleMagicMode },
   ];
 
   return (
-    <AnimatedLayout transitionName="bounceUp">
       <div className={`homeContainer ${heartbeat ? 'heartbeat' : ''} ${magicMode ? 'magic-mode' : ''}`}>
 
       <BackgroundAnimation />
@@ -103,12 +104,19 @@ function Home() {
         {activeEffect === 'stars' && <FloatingParticles type="stars" count={100} />}
 
         <div className="cornerHeartButton" hidden={magicMode ? true : false}>
-          <button className="eyeButton" onClick={handleHeartbeat}>
+          <button className="iconButton" onClick={handleHeartbeat}>
             <Heart size={24} />
           </button>
         </div>
+
+        <div className="cornerMenuButton" hidden={showElement ? true : false}>
+          <button className="iconButton" onClick={() => handleNavigation('/movies')}>
+            <CircleArrowRight size={20} />
+          </button>
+        </div>
+
         <div className="cornerEyeButton" hidden={showElement ? true : false}>
-          <button className="eyeButton" onClick={toggleButtons}>
+          <button className="iconButton" onClick={toggleButtons}>
             <Eye size={24} />
           </button>
 
@@ -121,10 +129,10 @@ function Home() {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
               >
-                {buttonIcons.map(({ icon, label, onClick }) => (
+                {listButtonIcons.map(({ icon, label, onClick }) => (
                   <motion.button
                     key={label}
-                    className="eyeButton"
+                    className="iconButton"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: 'spring', stiffness: 300 }}
@@ -194,14 +202,13 @@ function Home() {
               startDate={CONSTANT.daysTogether}
             />
           ) : (
-            <button className="eyeButton" onClick={handleRevealDays}>
+            <button className="iconButton" onClick={handleRevealDays}>
               <CalendarDays size={20} />
             </button>
           )}
         </div>
         <PolaroidDisplay isVisible={showPolaroid} onClose={handleOnClosePolaroid} />
       </div>
-    </AnimatedLayout>
   );
 }
 
