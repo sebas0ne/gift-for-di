@@ -77,3 +77,23 @@
   background-color: var(--color-black);
   border-radius: 2px;
 }
+
+.menuButton {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translate(-5%, 0%);
+  cursor: pointer;
+  transition: border-radius 0.4s ease, transform 0.4s ease;
+  overflow: hidden;
+}

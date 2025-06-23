@@ -1,6 +1,6 @@
 // src/components/animations/Menu.jsx
 import React, { useState } from "react";
-import { Menu, X } from 'lucide-react';
+import { AlignJustify, X } from 'lucide-react';
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -25,7 +25,7 @@ const MenuM = () => {
         className={`menu-icon ${isOpen ? "open" : ""}`}
         onClick={toggleMenu}
       >
-        {isOpen ? <X size={40} /> : <Menu size={40} />}
+        {isOpen ? <button className="menuButton"><X size={20} /></button> : <button className="menuButton"><AlignJustify size={20} /></button>}
       </div>
 
       <AnimatePresence>

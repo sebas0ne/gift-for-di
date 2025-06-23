@@ -12,8 +12,8 @@
 
 .floatingDot {
   position: absolute;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   animation: floatingDots 12s ease-in-out infinite;
   opacity: 0.7;
@@ -46,16 +46,60 @@
 .floatingDot:nth-child(9n) {
   background-color: var(--accent-blue-dark);
 }
+.floatingDot:nth-child(10n) {
+  background-color: var(--color-gray-dark);
+}
+.floatingDot:nth-child(11n) {
+  background-color: var(--color-pink);
+}
+.floatingDot:nth-child(12n) {
+  background-color: var(--color-magenta);
+}
+.floatingDot:nth-child(13n) {
+  background-color: var(--color-magenta-dark);
+}
+.floatingDot:nth-child(14n) {
+  background-color: var(--color-orange);
+}
+.floatingDot:nth-child(15n) {
+  background-color: var(--color-orange-dark);
+}
+.floatingDot:nth-child(16n) {
+  background-color: var(--color-green-pastel-dark);
+}
+.floatingDot:nth-child(17n) {
+  background-color: var(--color-green-pastel);
+}
+.floatingDot:nth-child(18n) {
+  background-color: var(--color-blue);
+}
+.floatingDot:nth-child(19n) {
+  background-color: var(--color-blue-dark);
+}
+.floatingDot:nth-child(20n) {
+  background-color: var(--color-beige-light);
+}
 
-.floatingDot:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.floatingDot:nth-child(2) { top: 30%; left: 70%; animation-delay: 2s; }
-.floatingDot:nth-child(3) { top: 60%; left: 10%; animation-delay: 4s; }
-.floatingDot:nth-child(4) { top: 80%; left: 50%; animation-delay: 6s; }
-.floatingDot:nth-child(5) { top: 15%; left: 40%; animation-delay: 1s; }
-.floatingDot:nth-child(6) { top: 55%; left: 95%; animation-delay: 3s; }
-.floatingDot:nth-child(7) { top: 75%; left: 25%; animation-delay: 5s; }
-.floatingDot:nth-child(8) { top: 50%; left: 60%; animation-delay: 7s; }
-.floatingDot:nth-child(9) { top: 25%; left: 75%; animation-delay: 8s; }
+.floatingDot:nth-child(1) { top: 10%; left: 5%; animation-delay: 5s; }
+.floatingDot:nth-child(2) { top: 20%; left: 15%; animation-delay: 5s; }
+.floatingDot:nth-child(3) { top: 30%; left: 40%; animation-delay: 5s; }
+.floatingDot:nth-child(4) { top: 40%; left: 50%; animation-delay: 5s; }
+.floatingDot:nth-child(5) { top: 30%; left: 15%; animation-delay: 5s; }
+.floatingDot:nth-child(6) { top: 10%; left: 30%; animation-delay: 5s; }
+.floatingDot:nth-child(7) { top: 20%; left: 45%; animation-delay: 5s; }
+.floatingDot:nth-child(8) { top: 20%; left: 70%; animation-delay: 5s; }
+.floatingDot:nth-child(9) { top: 35%; left: 90%; animation-delay: 5s; }
+.floatingDot:nth-child(10) { top: 25%; left: 80%; animation-delay: 5s; }
+.floatingDot:nth-child(11) { top: 60%; left: 70%; animation-delay: 10s; }
+.floatingDot:nth-child(12) { top: 55%; left: 40%; animation-delay: 10s; }
+.floatingDot:nth-child(13) { top: 80%; left: 50%; animation-delay: 10s; }
+.floatingDot:nth-child(14) { top: 90%; left: 60%; animation-delay: 10s; }
+.floatingDot:nth-child(15) { top: 75%; left: 80%; animation-delay: 10s; }
+.floatingDot:nth-child(16) { top: 85%; left: 25%; animation-delay: 10s; }
+.floatingDot:nth-child(17) { top: 80%; left: 50%; animation-delay: 10s; }
+.floatingDot:nth-child(18) { top: 55%; left: 90%; animation-delay: 10s; }
+.floatingDot:nth-child(19) { top: 65%; left: 15%; animation-delay: 10s; }
+.floatingDot:nth-child(20) { top: 90%; left: 5%; animation-delay: 10s; }
 
 @keyframes floatingDots {
   0%, 100% { 

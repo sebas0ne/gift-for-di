@@ -7,7 +7,8 @@
     --color-beige-dark: #d8cab8;
     --color-beige-dark-rgba: 216, 202, 184;
     --color-gray: #888888;
-    --color-black-soft: #2a2a2a;
+    --color-gray-dark: #2c3e50;
+    --color-black-soft: #12121274;
     --primary-pink: #ec4899;
     --secondary-pink: #f97316;
     --accent-yellow: #eab308;
@@ -18,4 +19,14 @@
     --green-light: #45f11f;
     --purple-dark: #7700ae;
     --purple-light: #af04ff;
+    --color-pink: #fe00cc;
+    --color-pínk-dark: #bd009a;
+    --color-magenta: #6e38fe;
+    --color-magenta-dark: #4a387d;
+    --color-orange: #ff5900;
+    --color-orange-dark: #a63a00;
+    --color-green-pastel-dark: #a9ff9c;
+    --color-green-pastel-dark: #6eab64;
+    --color-blue: #0032ff;
+    --color-blue-dark: #0a1c66;
   }

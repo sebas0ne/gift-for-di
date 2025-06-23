@@ -38,8 +38,8 @@
 }
 
 .nexButtonSection {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--color-white);
   color: var(--color-black);
@@ -120,14 +120,13 @@
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
-  border: 2px solid var(--color-beige-dark);
 }
 
 .card:hover {
   transform: rotateX(2deg) rotateY(2deg) translateZ(10px);
 }
 
-.card::before {
+.card::after {
   content: "";
   position: absolute;
   top: -2px;
@@ -140,7 +139,7 @@
 }
 
 .cardTitle {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(2.5rem, 4vw, 2.2rem);
   color: var(--color-black);
   margin-bottom: 2rem;
   font-weight: 400;
@@ -164,7 +163,7 @@
 }
 
 .cardText {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(1.5rem, 2.5vw, 1.2rem);
   line-height: 1.8;
   color: var(--color-black);
   text-align: justify;
@@ -182,11 +181,18 @@
   align-items: center;
 }
 
+.cardFooterButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
 .cardNumber {
   font-size: 2.5rem;
   color: var(--color-black);
   font-weight: bold;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 /* Animations */

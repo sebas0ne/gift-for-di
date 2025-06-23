@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
-import { Play, Pause, CircleArrowRight } from "lucide-react"
+import { Play, Pause, CircleChevronDown, CircleChevronUp } from "lucide-react"
 import { motion } from 'framer-motion';
+import BackgroundAnimation from '../components/animations/BackgroundAnimation';
 
 import CONSTANT from '../utils/constant';
 import "../styles/Pages/WhyILoveYou.css"
@@ -9,44 +10,11 @@ const WhyILoveYou = () => {
   const [visibleSections, setVisibleSections] = useState(new Set())
   const [isPlaying, setIsPlaying] = useState(false)
   const [audioLoaded, setAudioLoaded] = useState(false)
+  const limitPaginate = CONSTANT.loveReasons.length;
   const sectionsRef = useRef([])
   const containerRef = useRef(null)
   const audioRef = useRef(null)
 
-  const loveReasons = [
-    {
-      id: 1,
-      title: "Te amo porque me haces mejor...",
-      content:
-        "Cada día a tu lado descubro una nueva versión de mí mismo. Tu amor me inspira a crecer, a soñar más alto y a ser la mejor persona que puedo ser. Contigo he aprendido que el amor verdadero no solo acepta quien eres, sino que te impulsa a convertirte en quien puedes llegar a ser.",
-    },
-    {
-      id: 2,
-      title: "Te amo porque me siento en casa contigo...",
-      content:
-        "No importa dónde estemos, si estás a mi lado, estoy en casa. Tu abrazo es mi refugio, tu risa es mi melodía favorita, y tu presencia convierte cualquier lugar en el sitio más hermoso del mundo. Contigo he encontrado esa paz que tanto buscaba.",
-    },
-    {
-      id: 3,
-      title: "Te amo porque eres mi mejor amiga...",
-      content:
-        "Antes de ser mi amor, eres mi cómplice, mi confidente, la persona con quien puedo ser completamente yo mismo. Compartimos secretos, risas, sueños y hasta los silencios más cómodos. Eres la persona que elegiría una y mil veces para vivir esta aventura llamada vida.",
-    },
-    {
-      id: 4,
-      title: "Te amo porque me enseñas cada día...",
-      content:
-        "Tu sabiduría, tu forma de ver el mundo, tu capacidad de encontrar belleza en los pequeños detalles... Todo eso me ha cambiado para siempre. Me has enseñado que el amor no es solo un sentimiento, sino una decisión que tomamos cada día de cuidarnos, respetarnos y crecer juntos.",
-    },
-    {
-      id: 5,
-      title: "Te amo porque eres única...",
-      content:
-        "En un mundo lleno de personas, tú brillas con luz propia. Tu forma de reír, de pensar, de amar, de soñar... Todo en ti es especial y auténtico. No existe nadie como tú, y me siento el más afortunado de poder llamarte mía y de ser tuyo para siempre.",
-    },
-  ]
-
-  // Audio setup
   useEffect(() => {
     const audio = new Audio("/music/LikeYouDo.mp3")
     audio.loop = true
@@ -131,11 +99,20 @@ const WhyILoveYou = () => {
     sectionsRef.current[index] = el
   }
 
-  const _hrefSection = (reason) => {
-    if(reason === 5){
-        return '#headerSection';
+  const _hrefSectionManager = (reason, type) => {
+    if (type === 'up') {
+        console.log(reason);
+        if(reason === limitPaginate || reason === 1){
+            return '#headerSection';
+        } else {
+            return `#loveSection${reason - 1}`;
+        }
     } else {
-        return `#loveSection${reason + 1}`;
+        if(reason === limitPaginate){
+            return '#headerSection';
+        } else {
+            return `#loveSection${reason + 1}`;
+        }
     }
   }
 
@@ -150,6 +127,7 @@ const WhyILoveYou = () => {
       </button>
 
       <header className="headerSection" id="headerSection">
+      <BackgroundAnimation />
       <div className={`homeContent`}>
           <h1 className="birthdayText enhanced-title">
             {CONSTANT.whyILoveYouPage.tiltePage.split('').map((char, index) => (
@@ -171,12 +149,12 @@ const WhyILoveYou = () => {
           </h1>
         </div>
         <a className="nexButtonSection" href="#mainContent">
-          <CircleArrowRight size={20} />
+          <CircleChevronDown size={20} />
         </a>
       </header>
 
       <main className="mainContent" id="mainContent">
-        {loveReasons.map((reason, index) => (
+        {CONSTANT.loveReasons.map((reason, index) => (
           <section
             key={reason.id}
             ref={setSectionRef(index)}
@@ -192,9 +170,18 @@ const WhyILoveYou = () => {
                 </div>
                 <div className="cardFooter">
                   <span className="cardNumber">{String(reason.id).padStart(2, "0")}</span>
-                  <a className="nexButtonSection" href={_hrefSection(reason.id)}>
-                    <CircleArrowRight size={20} />
-                  </a>
+                  <div className="cardFooterButton">
+                    <a className="nexButtonSection" href={_hrefSectionManager(reason.id, 'up')}>
+                        <CircleChevronUp size={20} />
+                    </a>
+                    {reason.id !== limitPaginate && 
+                    (
+                      <a className="nexButtonSection" href={_hrefSectionManager(reason.id, 'down')}>
+                        <CircleChevronDown size={20} />
+                      </a>
+                    )
+                    }
+                  </div>
                 </div>
               </div>
             </div>
