@@ -1,7 +1,6 @@
 // src/pages/Gift.jsx
 import React from 'react';
 import PageTitle from '../components/common/PageTitle';
-import Menu from '../components/animations/Menu';
 import TicketCard from '../components/common/TicketCard';
 import TourGuide from '../components/common/TourGuide';
 

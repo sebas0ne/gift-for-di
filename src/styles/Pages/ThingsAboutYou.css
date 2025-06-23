@@ -1,0 +1,329 @@
+
+  .pageContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .header {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: var(--color-white);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--color-white);
+    font-style: italic;
+    opacity: 0.9;
+  }
+  
+  .controlsContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .secretButton {
+    padding: 12px 24px;
+    border: 2px solid var(--color-white);
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .contentSection {
+    position: relative;
+  }
+  
+  .viewToggle {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .toggleButton {
+    padding: 10px;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .toggleButton:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+  
+  .toggleButton.active {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+  
+  .notesContainer {
+    margin-bottom: 60px;
+  }
+  
+  .notesContainer.gridView {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .notesContainer.listView {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .stickyNote {
+    position: relative;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-black);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 4px 0px var(--color-black);
+    transform-origin: center center;
+    opacity: 0;
+  }
+  
+  .stickyNote.visible {
+    opacity: 1;
+  }
+  
+  .stickyNote.grid {
+    min-height: 200px;
+    aspect-ratio: 1;
+  }
+  
+  .stickyNote.list {
+    min-height: 120px;
+    aspect-ratio: 2 / 1;
+  }
+  
+  .stickyNote:hover {
+    box-shadow: 6px 6px 0px var(--color-black);
+  }
+  
+  .stickyNote.expanded {
+    z-index: 10;
+    box-shadow: 8px 8px 0px var(--color-black);
+  }
+  
+  .stickyNote.animating {
+    animation: expandZoom 0.3s ease-out;
+  }
+  
+  @keyframes expandZoom {
+    0% {
+      transform: rotate(var(--rotation)) scale(1);
+    }
+    50% {
+      transform: rotate(0deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1.05);
+    }
+  }
+  
+  .noteContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .stickyNote.list .noteContent {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+  
+  .noteTitle {
+    font-weight: 600;
+    color: var(--color-black);
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  
+  .stickyNote.list .noteTitle {
+    margin-bottom: 0;
+  }
+  
+  .noteExpandedContent {
+    margin-top: 15px;
+    animation: fadeInUp 0.3s ease-out;
+    width: 100%;
+  }
+  
+  .stickyNote.list .noteExpandedContent {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .noteDivider {
+    height: 2px;
+    background-color: var(--color-black);
+    margin: 10px 0;
+    opacity: 0.3;
+  }
+  
+  .noteDescription {
+    color: var(--color-black);
+    line-height: 1.6;
+    font-style: italic;
+  }
+  
+  .stickyNote.list .noteDescription {
+    text-align: left;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--color-white);
+    font-style: italic;
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design - Mobile First */
+  @media (max-width: 768px) {
+    .pageContainer {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .notesContainer.gridView {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .stickyNote.grid {
+      min-height: 160px;
+      padding: 15px;
+    }
+  
+    .stickyNote.list {
+      min-height: 100px;
+      padding: 15px;
+    }
+  
+    .viewToggle {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .stickyNote.grid {
+      min-height: 140px;
+      padding: 12px;
+    }
+  
+    .stickyNote.list {
+      min-height: 90px;
+      padding: 12px;
+    }
+  
+    .noteTitle {
+      font-size: 1.5rem;
+    }
+  
+    .stickyNote.list .noteTitle {
+      font-size: 1.5rem;
+    }
+  
+    .noteDescription {
+      font-size: 1.2rem;
+    }
+  
+    .stickyNote.list .noteDescription {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Medium screens */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .notesContainer.gridView {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+  
+    .stickyNote.grid {
+      min-height: 180px;
+    }
+  
+    .stickyNote.list {
+      min-height: 110px;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 1025px) {
+    .notesContainer.gridView {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .stickyNote.grid {
+      min-height: 200px;
+      aspect-ratio: 0;
+    }
+  
+    .stickyNote.list {
+      min-height: 120px;
+      aspect-ratio: 3 / 1;
+    }
+
+    .noteTitle {
+      font-size: 2.5rem;
+    }
+
+    .noteExpandedContent {
+      font-size: 2.5rem;
+    }
+  }

@@ -152,9 +152,9 @@ const constant =  {
   ],
   "itemsMenu": [
     { "label": 'INICIO', "path": '/' },
-    { "label": 'PELICULAS', "path": '/movies' },
     { "label": 'COSAS QUE AMO DE TI', "path": '/thingsAboutYou' },
-    { "label": 'POR QUÉ TE AMO?', "path": '/whyLoveYo' },
+    { "label": 'PELICULAS', "path": '/movies' },
+    { "label": 'POR QUÉ TE AMO?', "path": '/whyILoveYou' },
     { "label": 'HOROSCOPO DEL AMOR', "path": '/loveHoroscope' },
     { "label": 'REGALO', "path": '/gift' },
   ],
@@ -206,6 +206,58 @@ const constant =  {
         "value": "21:00"
       }
     }
+  },
+  "initialNotes": [
+    {
+      "id": 0,
+      "title": "Tu risa cuando estás nerviosa...",
+      "content": "Me derrite cada vez, es como si el universo se volviera más suave por un momento."
+    },
+    {
+      "id": 1,
+      "title": "Tus pasos suaves cuando caminas descalza por la casa...",
+      "content": "Cada pisada es como una melodía silenciosa que llena de paz todos los rincones."
+    },
+    {
+      "id": 2,
+      "title": "La forma en que sostienes tu taza de café...",
+      "content": "Con ambas manos, como si fuera un tesoro caliente que te abraza desde adentro."
+    },
+    {
+      "id": 3,
+      "title": "Tu manera de susurrar 'buenas noches'...",
+      "content": "Es el sonido más hermoso que existe, mejor que cualquier canción de cuna."
+    },
+    {
+      "id": 4,
+      "title": "Cuando te concentras leyendo...",
+      "content": "Tu ceño fruncido de concentración es la cosa más adorable que he visto jamás."
+    },
+    {
+      "id": 5,
+      "title": "Tu forma de tararear sin darte cuenta...",
+      "content": "Creas la banda sonora perfecta para nuestros momentos cotidianos."
+    },
+  ],
+  "secretNotes": [
+    {
+      "id": 6,
+      "title": "El momento exacto en que me enamoré...",
+      "content": "Fue cuando te vi ayudar a ese gatito perdido. En ese instante supe que tenías el corazón más hermoso del mundo.",
+    },
+    {
+      "id": 7,
+      "title": "Tu sonrisa de las mañanas...",
+      "content": "Incluso despeinada y con los ojos hinchados, sigues siendo la vista más hermosa con la que podría despertar.",
+    },
+    {
+      "id": 8,
+      "title": "La manera en que pintas tus uñas...",
+      "content": "Con tanta paciencia y dedicación, como si fueras una artista creando su obra maestra.",
+    }
+  ],
+  "whyILoveYouPage": {
+    "tiltePage": "¿Por qué te amo?"
   }
 }
 

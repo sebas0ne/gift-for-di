@@ -11,6 +11,8 @@ import CountdownGate from './pages/CountdownGate';
 import Home from './pages/Home/Home';
 import Movies from './pages/Movies';
 import Gift from './pages/Gift';
+import ThingsAboutYou from './pages/ThingsAboutYou';
+import WhyILoveYou from './pages/WhyILoveYou';
 
 import CONSTANT from './utils/constant';
 
@@ -37,8 +39,10 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" element={<AnimatedLayout><Home /></AnimatedLayout>} />
+            <Route path="/thingsAboutYou" element={<AnimatedLayoutMenu><ThingsAboutYou /></AnimatedLayoutMenu>} />
             <Route path="/movies" element={<AnimatedLayoutMenu><Movies /></AnimatedLayoutMenu>} />
             <Route path="/gift" element={<AnimatedLayoutMenu><Gift /></AnimatedLayoutMenu>} />
+            <Route path="/whyILoveYou" element={<AnimatedLayoutMenu><WhyILoveYou /></AnimatedLayoutMenu>} />
           </Routes>
         )}
       </>

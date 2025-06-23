@@ -110,7 +110,7 @@ function Home() {
         </div>
 
         <div className="cornerMenuButton" hidden={showElement ? true : false}>
-          <button className="iconButton" onClick={() => handleNavigation('/movies')}>
+          <button className="iconButton" onClick={() => handleNavigation('/thingsAboutYou')}>
             <CircleArrowRight size={20} />
           </button>
         </div>
