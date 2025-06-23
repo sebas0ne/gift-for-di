@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Heart, Star, Image, Moon, HandHeart } from 'lucide-react';
+import { Eye, Heart, Star, Image, Moon, HandHeart, CalendarDays } from 'lucide-react';
 import DaysTogether from '../../components/common/DaysTogether';
 import AnimatedLayout from '../../layouts/AnimatedLayout';
 
@@ -22,6 +22,9 @@ function Home() {
   const [magicMode, setMagicMode] = useState(false);
   const [showElement, setShowElement] = useState(false);
   const [showPolaroid, setShowPolaroid] = useState(false);
+  const [showDaysText, setShowDaysText] = useState(() => {
+    return localStorage.getItem('showTextDays') === 'true';
+  });
   const navigate = useNavigate();
 
   const handleShowPolaroid = () => {
@@ -76,6 +79,11 @@ function Home() {
 
   const handleNavigation = (path) => {
     navigate(path);
+  };
+
+  const handleRevealDays = () => {
+    localStorage.setItem('showTextDays', 'true');
+    setShowDaysText(true);
   };
 
   const buttonIcons = [
@@ -179,11 +187,17 @@ function Home() {
         )}
 
         <div className={`homeFooter ${showElement ? 'hiddenText' : ''}`}>
-          <DaysTogether
-            textPrincipal={CONSTANT.home.principal}
-            textSecondary={CONSTANT.home.secondary}
-            startDate={CONSTANT.daysTogether}
-          />
+          {showDaysText ? (
+            <DaysTogether
+              textPrincipal={CONSTANT.home.principal}
+              textSecondary={CONSTANT.home.secondary}
+              startDate={CONSTANT.daysTogether}
+            />
+          ) : (
+            <button className="eyeButton" onClick={handleRevealDays}>
+              <CalendarDays size={20} />
+            </button>
+          )}
         </div>
         <PolaroidDisplay isVisible={showPolaroid} onClose={handleOnClosePolaroid} />
       </div>
