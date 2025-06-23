@@ -8,7 +8,7 @@ import AnimatedLayout from './layouts/AnimatedLayout';
 import AnimatedLayoutMenu from './layouts/AnimatedLayoutMenu';
 import CircularTextLoader from './components/common/CircularTextLoader';
 import CountdownGate from './pages/CountdownGate';
-import Home from './pages/Home/Home';
+import Home from './pages/Home';
 import Movies from './pages/Movies';
 import Gift from './pages/Gift';
 import ThingsAboutYou from './pages/ThingsAboutYou';

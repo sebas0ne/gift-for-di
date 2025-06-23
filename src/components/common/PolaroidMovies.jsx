@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react';
+// src/components/common/PolaroidMovies.jsx
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import '../../styles/common/PolaroidDisplay.css';
 
 const PolaroidMovies = ({ isVisible, imagesData,  onClose }) => {
-    useEffect(() => {
-        if (!isVisible) return;
-      }, [isVisible]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    setIsLoading(true);
+  }, [isVisible, imagesData]);
 
   return (
     <AnimatePresence>
@@ -28,7 +32,8 @@ const PolaroidMovies = ({ isVisible, imagesData,  onClose }) => {
             transition={{ duration: 0.5, type: 'spring' }}
           >
             <div className="polaroid">
-              <img src={imagesData.image} alt="Polaroid" className="polaroidImage" />
+              {isLoading && <div className="polaroidLoader"></div>}
+              <img src={imagesData.image} alt="Polaroid" className={`polaroidImage ${isLoading ? 'hidden' : ''}`} onLoad={() => setIsLoading(false)} />
               <p className="polaroidCaption">{imagesData.title}</p>
             </div>
           </motion.div>

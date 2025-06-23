@@ -7,6 +7,7 @@ import '../../styles/common/PolaroidDisplay.css';
 
 const PolaroidDisplay = ({ isVisible, onClose }) => {
   const [currentPolaroid, setCurrentPolaroid] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -42,8 +43,10 @@ const PolaroidDisplay = ({ isVisible, onClose }) => {
           lastDay: tracker.lastDay
         };
         localStorage.setItem('polaroidTracker', JSON.stringify(tracker));
+        setIsLoading(true);
         setCurrentPolaroid(polaroidToShow);
     } else {
+      setIsLoading(true);
       setCurrentPolaroid(CONSTANT.defaultImage);
     }
   }, [isVisible]);
@@ -68,7 +71,8 @@ const PolaroidDisplay = ({ isVisible, onClose }) => {
             transition={{ duration: 0.5, type: 'spring' }}
           >
             <div className="polaroid">
-              <img src={currentPolaroid.src} alt="Polaroid" className="polaroidImage" />
+            {isLoading && <div className="polaroidLoader"></div>}
+              <img src={currentPolaroid.src} alt="Polaroid" className={`polaroidImage ${isLoading ? 'hidden' : ''}`} onLoad={() => setIsLoading(false)} />
               <p className="polaroidCaption">{currentPolaroid.description}</p>
             </div>
           </motion.div>

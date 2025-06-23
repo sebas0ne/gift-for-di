@@ -1,3 +1,4 @@
+// src/pages/WhyILoveYou.jsx
 import { useState, useEffect, useRef } from "react"
 import { Play, Pause, CircleChevronDown, CircleChevronUp } from "lucide-react"
 import { motion } from 'framer-motion';

@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Heart, Star, Image, Moon, HandHeart, CalendarDays, AlignJustify } from 'lucide-react';
-import DaysTogether from '../../components/common/DaysTogether';
+import DaysTogether from '../components/common/DaysTogether';
 
-import BackgroundAnimation from '../../components/animations/BackgroundAnimation';
-import FloatingParticles from '../../components/effects/FloatingParticles';
-import EffectMessage from '../../components/effects/EffectMessage';
-import PolaroidDisplay from '../../components/common/PolaroidDisplay';
+import BackgroundAnimation from '../components/animations/BackgroundAnimation';
+import FloatingParticles from '../components/effects/FloatingParticles';
+import EffectMessage from '../components/effects/EffectMessage';
+import PolaroidDisplay from '../components/common/PolaroidDisplay';
 
-import CONSTANT from '../../utils/constant';
-import '../../styles/Pages/Home/Home.css';
+import CONSTANT from '../utils/constant';
+import '../styles/Pages/Home/Home.css';
 
 function Home() {
   const [showButtons, setShowButtons] = useState(false);
