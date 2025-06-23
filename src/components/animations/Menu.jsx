@@ -1,5 +1,5 @@
 // src/components/animations/Menu.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AlignJustify, X } from 'lucide-react';
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -7,8 +7,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import CONSTANT from '../../utils/constant';
 import '../../styles/animations/Menu.css';
 
-const MenuM = () => {
+const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showMenuButton, setShowMenuButton] = useState(true);
+  const lastScrollY = useRef(window.scrollY);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -19,13 +21,36 @@ const MenuM = () => {
     setTimeout(() => navigate(path), 400);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) return;
+  
+      const currentScroll = window.scrollY;
+  
+      if (currentScroll === 0) {
+        setShowMenuButton(true);
+      } else {
+        setShowMenuButton(false);
+      }
+  
+      lastScrollY.current = currentScroll;
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
+
   return (
     <div className="menu-content">
       <div
-        className={`menu-icon ${isOpen ? "open" : ""}`}
+        className={`menu-icon animated-button ${isOpen ? "open" : ""} ${showMenuButton ? "" : "hide"}`}
         onClick={toggleMenu}
       >
-        {isOpen ? <button className="menuButton"><X size={20} /></button> : <button className="menuButton"><AlignJustify size={20} /></button>}
+        {isOpen ? (
+          <button className="menuButton"><X size={20} /></button>
+        ) : (
+          <button className="menuButton"><AlignJustify size={20} /></button>
+        )}
       </div>
 
       <AnimatePresence>
@@ -69,4 +94,4 @@ const MenuM = () => {
   );
 };
 
-export default MenuM;
+export default Menu;
