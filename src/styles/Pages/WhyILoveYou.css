@@ -1,7 +1,7 @@
 /* Audio Control Button */
 .audioControlButton {
   position: fixed;
-  top: 2rem;
+  top: 0.2rem;
   right: 2rem;
   z-index: 1000;
   background: var(--color-white);
@@ -38,6 +38,7 @@
 }
 
 .nexButtonSection {
+  bottom: 2rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -55,25 +56,14 @@
   cursor: pointer;
   transition: border-radius 0.4s ease, transform 0.4s ease;
   overflow: hidden;
+  animation: floatUp 2s ease-in-out infinite;
 }
 
 .whyILoveYouContainer {
-  max-width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   overflow-x: hidden;
 }
-
-/* Header Styles */
-/* .headerSection {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-} */
 
 .mainTitle {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -220,10 +210,6 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .headerSection {
-    padding: 1rem;
-  }
-
   .mainContent {
     padding: 2rem 1rem;
   }
@@ -256,9 +242,5 @@
   .cardTitle::after {
     width: 40px;
     height: 2px;
-  }
-
-  .headerSection {
-    min-height: 80vh;
   }
 }

@@ -24,18 +24,14 @@ const Menu = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (isOpen) return;
-  
       const currentScroll = window.scrollY;
-  
       if (currentScroll === 0) {
         setShowMenuButton(true);
       } else {
         setShowMenuButton(false);
       }
-  
       lastScrollY.current = currentScroll;
     };
-  
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isOpen]);

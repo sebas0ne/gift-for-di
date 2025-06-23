@@ -101,7 +101,6 @@ const WhyILoveYou = () => {
 
   const _hrefSectionManager = (reason, type) => {
     if (type === 'up') {
-        console.log(reason);
         if(reason === limitPaginate || reason === 1){
             return '#headerSection';
         } else {
@@ -128,7 +127,7 @@ const WhyILoveYou = () => {
 
       <header className="headerSection" id="headerSection">
       <BackgroundAnimation />
-      <div className={`homeContent`}>
+      <div>
           <h1 className="birthdayText enhanced-title">
             {CONSTANT.whyILoveYouPage.tiltePage.split('').map((char, index) => (
               <motion.span

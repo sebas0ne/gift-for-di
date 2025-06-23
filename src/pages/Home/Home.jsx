@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Heart, Star, Image, Moon, HandHeart, CalendarDays, CircleArrowRight } from 'lucide-react';
+import { Eye, Heart, Star, Image, Moon, HandHeart, CalendarDays, AlignJustify } from 'lucide-react';
 import DaysTogether from '../../components/common/DaysTogether';
 
 import BackgroundAnimation from '../../components/animations/BackgroundAnimation';
@@ -98,10 +98,24 @@ function Home() {
   return (
       <div className={`homeContainer ${heartbeat ? 'heartbeat' : ''} ${magicMode ? 'magic-mode' : ''}`}>
 
-      <BackgroundAnimation />
+      {!showElement && <BackgroundAnimation />}
 
         {activeEffect === 'hearts' && <FloatingParticles type="hearts" count={80} />}
         {activeEffect === 'stars' && <FloatingParticles type="stars" count={100} />}
+
+        <div className={`homeFooter ${showElement ? 'hiddenText' : ''}`}>
+          {showDaysText ? (
+            <DaysTogether
+              textPrincipal={CONSTANT.home.principal}
+              textSecondary={CONSTANT.home.secondary}
+              startDate={CONSTANT.daysTogether}
+            />
+          ) : (
+            <button className="iconButton" onClick={handleRevealDays}>
+              <CalendarDays size={20} />
+            </button>
+          )}
+        </div>
 
         <div className="cornerHeartButton" hidden={magicMode ? true : false}>
           <button className="iconButton" onClick={handleHeartbeat}>
@@ -111,7 +125,7 @@ function Home() {
 
         <div className="cornerMenuButton" hidden={showElement ? true : false}>
           <button className="iconButton" onClick={() => handleNavigation('/thingsAboutYou')}>
-            <CircleArrowRight size={20} />
+            <AlignJustify size={20} />
           </button>
         </div>
 
@@ -194,19 +208,6 @@ function Home() {
            <EffectMessage message={CONSTANT.effectsMessage.goodNight} nameClass={showMessage} />
         )}
 
-        <div className={`homeFooter ${showElement ? 'hiddenText' : ''}`}>
-          {showDaysText ? (
-            <DaysTogether
-              textPrincipal={CONSTANT.home.principal}
-              textSecondary={CONSTANT.home.secondary}
-              startDate={CONSTANT.daysTogether}
-            />
-          ) : (
-            <button className="iconButton" onClick={handleRevealDays}>
-              <CalendarDays size={20} />
-            </button>
-          )}
-        </div>
         <PolaroidDisplay isVisible={showPolaroid} onClose={handleOnClosePolaroid} />
       </div>
   );
