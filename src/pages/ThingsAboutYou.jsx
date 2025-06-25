@@ -9,10 +9,10 @@ import CONSTANT from '../utils/constant';
 import "../styles/Pages/ThingsAboutYou.css"
 
 export default function ThingsAboutYou() {
-  const [notes, setNotes] = useState(CONSTANT.initialNotes)
+  const [notes, setNotes] = useState(CONSTANT.initialThings)
   const [canRevealSecret, setCanRevealSecret] = useState(false)
   const [secretRevealed, setSecretRevealed] = useState(false)
-  const [viewMode, setViewMode] = useState("list")
+  const [viewMode, setViewMode] = useState("grid")
 
   useEffect(() => {
     checkDailySecret()
@@ -36,7 +36,7 @@ export default function ThingsAboutYou() {
   const revealSecretNote = () => {
     if (!canRevealSecret || secretRevealed) return
 
-    const randomSecret = CONSTANT.secretNotes[Math.floor(Math.random() * CONSTANT.secretNotes.length)]
+    const randomSecret = CONSTANT.secretThings[Math.floor(Math.random() * CONSTANT.secretThings.length)]
     setNotes((prev) => [randomSecret, ...prev])
 
     const today = new Date().toLocaleDateString('sv-SE');
@@ -51,7 +51,7 @@ export default function ThingsAboutYou() {
     <div className="pageContainer">
       <header className="header">
         <PageTitle
-            text="Pequeños Momentos"
+            text={CONSTANT.pageTitleThingsAboutYou}
             size="4rem"
             weight="800"
         />

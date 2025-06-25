@@ -167,7 +167,6 @@
     font-weight: 600;
     color: var(--color-black);
     line-height: 1.4;
-    margin-bottom: 10px;
   }
   
   .stickyNote.list .noteTitle {
@@ -175,13 +174,11 @@
   }
   
   .noteExpandedContent {
-    margin-top: 15px;
     animation: fadeInUp 0.3s ease-out;
     width: 100%;
   }
   
   .stickyNote.list .noteExpandedContent {
-    margin-top: 10px;
     margin-left: 20px;
   }
   
@@ -233,7 +230,7 @@
   
     .notesContainer.gridView {
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 15px;
     }
   
     .stickyNote.grid {
@@ -279,7 +276,7 @@
     }
   
     .noteDescription {
-      font-size: 1.2rem;
+      font-size: 1.08rem;
     }
   
     .stickyNote.list .noteDescription {

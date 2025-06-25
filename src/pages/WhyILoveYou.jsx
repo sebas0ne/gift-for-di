@@ -163,7 +163,7 @@ const WhyILoveYou = () => {
             id={`loveSection${reason.id}`}
           >
             <div className="cardContainer">
-              <div className="card">
+              <div className="containerCard">
                 <h2 className="cardTitle">{reason.title}</h2>
                 <div className="cardContent">
                   <p className="cardText">{reason.content}</p>

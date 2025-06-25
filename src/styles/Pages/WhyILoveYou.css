@@ -102,7 +102,7 @@
   perspective: 1000px;
 }
 
-.card {
+.containerCard {
   background: var(--color-white);
   border-radius: 20px;
   padding: 3rem;
@@ -112,11 +112,11 @@
   transition: transform 0.3s ease;
 }
 
-.card:hover {
+.containerCard:hover {
   transform: rotateX(2deg) rotateY(2deg) translateZ(10px);
 }
 
-.card::after {
+.containerCard::after {
   content: "";
   position: absolute;
   top: -2px;
@@ -214,11 +214,11 @@
     padding: 2rem 1rem;
   }
 
-  .card {
+  .containerCard {
     padding: 2rem 1.5rem;
   }
 
-  .card:hover {
+  .containerCard:hover {
     transform: none;
   }
 
@@ -234,7 +234,7 @@
 }
 
 @media (max-width: 480px) {
-  .card {
+  .containerCard {
     padding: 1.5rem 1rem;
     border-radius: 15px;
   }

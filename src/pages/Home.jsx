@@ -11,7 +11,7 @@ import EffectMessage from '../components/effects/EffectMessage';
 import PolaroidDisplay from '../components/common/PolaroidDisplay';
 
 import CONSTANT from '../utils/constant';
-import '../styles/Pages/Home/Home.css';
+import '../styles/Pages/Home.css';
 
 function Home() {
   const [showButtons, setShowButtons] = useState(false);

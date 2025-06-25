@@ -2,7 +2,7 @@
 
 const constant =  {
   "home": {
-    "text": "¡Feliz  Cumpleaños  Di!",
+    "text": "¡FELIZ CUMPLE AMOR!",
     "principal": "Te recuerdo que llevamos",
     "secondary": "días juntos",
   },
@@ -11,7 +11,7 @@ const constant =  {
     "stars": "Un amor eterno, como las estrellas en el universo.",
     "goodNight": "De pronto es de noche, buenas noches mi amor!"
   },
-  "birthdayDate": "2025-06-01",
+  "birthdayDate": "2025-07-01",
   "daysTogether": "2023-10-21",
   "loaderText": "* MI AMOR * FELIZ CUMPLEAÑOS *",
   "heartText": "Mi corazón late por ti todos los días.",
@@ -153,12 +153,12 @@ const constant =  {
   "itemsMenu": [
     { "label": 'INICIO', "path": '/' },
     { "label": 'COSAS QUE AMO DE TI', "path": '/thingsAboutYou' },
-    { "label": 'PELICULAS', "path": '/movies' },
     { "label": 'POR QUÉ TE AMO?', "path": '/whyILoveYou' },
-    { "label": 'HOROSCOPO DEL AMOR', "path": '/loveHoroscope' },
+    { "label": '¿NOS GUSTA EL CINE?', "path": '/movies' },
+    { "label": 'UN POCO DE HISTORIA', "path": '/timeline' },
     { "label": 'REGALO', "path": '/gift' },
   ],
-  "gitTitle": "Tenemos una cita esperandonos en el 2026...",
+  "gitTitle": "UNA CITA NOS ESPERA EN EL 2026...",
   "qrImages": [
     "/images/dbtmFQr/1-NUEVAYoL.png",
     "/images/dbtmFQr/2-VOY-A-LLeVARTE-PA-PR.png",
@@ -207,57 +207,78 @@ const constant =  {
       }
     }
   },
-  "initialNotes": [
+  "pageTitleThingsAboutYou": "UNAS CUANTAS COSAS QUE AMO DE TI",
+  "initialThings": [
     {
       "id": 0,
-      "title": "Tu risa cuando estás nerviosa...",
-      "content": "Me derrite cada vez, es como si el universo se volviera más suave por un momento."
+      "title": "Tu sonrisa natural...",
+      "content": "¿Natural? Hablo de aquella sonrisa que de a poco se pinta en tu rostro, tan perfecta, tan suave, tan hermosa... Me cautiva, me hipnotiza."
     },
     {
       "id": 1,
-      "title": "Tus pasos suaves cuando caminas descalza por la casa...",
-      "content": "Cada pisada es como una melodía silenciosa que llena de paz todos los rincones."
+      "title": "Tus ojos...",
+      "content": "Me encanta, son el reflejo de tu alma y tu alma siempre tiene algo que decirme. ¿La mejor parte? Tengo el privilegio que siempre me miran con amor."
     },
     {
       "id": 2,
-      "title": "La forma en que sostienes tu taza de café...",
-      "content": "Con ambas manos, como si fuera un tesoro caliente que te abraza desde adentro."
+      "title": "Tus labios...",
+      "content": "Con el tamaño y grosor perfecto, encajan de manera sutil y delicada a mis labios, los besos que me brindan son dignos de una maravilla del mundo."
     },
     {
       "id": 3,
-      "title": "Tu manera de susurrar 'buenas noches'...",
-      "content": "Es el sonido más hermoso que existe, mejor que cualquier canción de cuna."
+      "title": "Tu compañia...",
+      "content": "Descubri que encontré la compañera de vida perfecta cuando te conocí, si estoy contigo me haces sentir en casa, me alegras, me reconfortas, me llenas, me sanas."
     },
     {
       "id": 4,
-      "title": "Cuando te concentras leyendo...",
-      "content": "Tu ceño fruncido de concentración es la cosa más adorable que he visto jamás."
+      "title": "Tus abrazos...",
+      "content": "Un acto simple con un significado complejo, si tengo que describirlos son mi lugar preferido, mi refugio, mi cable a tierra y sobre todo mi rincón favorito en el universo."
     },
     {
       "id": 5,
-      "title": "Tu forma de tararear sin darte cuenta...",
-      "content": "Creas la banda sonora perfecta para nuestros momentos cotidianos."
+      "title": "Tu valentía...",
+      "content": "Me enorgullece saber que eres fuerte como un roble, valiente como un titán, unas cualiades que resaltan bajo la sombra de tu espiritú. Y así como esto, amo cada parte de ti."
     },
-  ],
-  "secretNotes": [
     {
       "id": 6,
+      "title": "Tu aroma único...",
+      "content": "Inigualable sin duda, no pensé que podría estar más obsesionado de tu esencia. Tu olor me brinda paz y me recuerda en todo momento que estoy contigo. En definitiva tu sello personal."
+    },
+    {
+      "id": 7,
+      "title": "Tu voz...",
+      "content": "Produce una melodía especial que solo yo tengo el privilegio de sintonizar. Tu voz me tranquiliza, me guía, me brinda palabras de amor y a veces, simplemente me hace sonreír sin razón."
+    },
+    {
+      "id": 8,
+      "title": "Tus caricias...",
+      "content": "Un acto de amor increíble, el roce de tus manos sobre mi piel me explota el alma. En tus caricias encuentro satisfacción, pasión, ternura y una dosis de amor imposible de reemplazar."
+    },
+    {
+      "id": 9,
+      "title": "Tu amor por los detalles...",
+      "content": "Te fijas en cosas que los demás no notan. Desde lo que me gusta comer, hasta cómo me siento solo por mi mirada. Amo esa atención hasta por lo más minimo, me hace sentir especial y amado."
+    },
+  ],
+  "secretThings": [
+    {
+      "id": 10,
       "title": "El momento exacto en que me enamoré...",
       "content": "Fue cuando te vi ayudar a ese gatito perdido. En ese instante supe que tenías el corazón más hermoso del mundo.",
     },
     {
-      "id": 7,
+      "id": 11,
       "title": "Tu sonrisa de las mañanas...",
       "content": "Incluso despeinada y con los ojos hinchados, sigues siendo la vista más hermosa con la que podría despertar.",
     },
     {
-      "id": 8,
+      "id": 12,
       "title": "La manera en que pintas tus uñas...",
       "content": "Con tanta paciencia y dedicación, como si fueras una artista creando su obra maestra.",
     }
   ],
   "whyILoveYouPage": {
-    "tiltePage": "¿Por qué te amo?"
+    "tiltePage": "¿POR QUÉ TE AMO?"
   },
   "loveReasons": [
     {
@@ -284,6 +305,51 @@ const constant =  {
       "id": 5,
       "title": "Te amo porque eres única...",
       "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    },
+  ],
+  "timeLinePage": "RECORDEMOS NUESTRA HISTORIA JUNTOS",
+  "timelineData": [
+    {
+      "id": 1,
+      "image": "/images/primera-cita-1.png",
+      "title": "Nuestra primera cita.",
+      "description": "Esta es la descripción del primer momento importante en nuestra historia. Aquí puedes contar todos los detalles relevantes que sucedieron en esta fecha específica y por qué fue tan significativo para el desarrollo de los eventos posteriores.",
+      "subTitle": "Junio del 2025"
+    },
+    {
+      "id": 2,
+      "image":  "/images/movies/1.webp",
+      "title": "Segundo Hito",
+      "description": "Descripción detallada del segundo hito importante. Este momento marcó un antes y un después en la cronología de eventos, estableciendo las bases para los desarrollos futuros y creando nuevas oportunidades de crecimiento.",
+      "subTitle": "Junio del 2025"
+    },
+    {
+      "id": 3,
+      "image": "/images/movies/2.webp",
+      "title": "Tercer Logro",
+      "description": "El tercer logro representa un punto de inflexión crucial en esta historia. Aquí se consolidaron muchos de los esfuerzos anteriores y se abrieron nuevas posibilidades que antes parecían inalcanzables.",
+      "subTitle": "Junio del 2025"
+    },
+    {
+      "id": 4,
+      "image":  "/images/movies/3.webp",
+      "title": "Cuarto Evento",
+      "description": "Este cuarto evento significativo demuestra la evolución continua y el progreso constante. Cada paso ha sido fundamental para llegar hasta este punto y continuar avanzando hacia los objetivos establecidos.",
+      "subTitle": "Junio del 2025"
+    },
+    {
+      "id": 5,
+      "image": "/images/movies/2.webp",
+      "title": "Tercer Logro",
+      "description": "El tercer logro representa un punto de inflexión crucial en esta historia. Aquí se consolidaron muchos de los esfuerzos anteriores y se abrieron nuevas posibilidades que antes parecían inalcanzables.",
+      "subTitle": "Junio del 2025"
+    },
+    {
+      "id": 6,
+      "image":  "/images/movies/3.webp",
+      "title": "Cuarto Evento",
+      "description": "Este cuarto evento significativo demuestra la evolución continua y el progreso constante. Cada paso ha sido fundamental para llegar hasta este punto y continuar avanzando hacia los objetivos establecidos.",
+      "subTitle": "Junio del 2025"
     },
   ]
 }
