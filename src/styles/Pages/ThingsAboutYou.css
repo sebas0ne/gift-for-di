@@ -1,4 +1,4 @@
-
+/* src/styles/animations/ThingsAboutYou.css */
   .pageContainer {
     max-width: 1200px;
     margin: 0 auto;
@@ -160,13 +160,13 @@
     flex-direction: row;
     justify-content: flex-start;
     text-align: left;
-    gap: 20px;
+    gap: 15px;
   }
   
   .noteTitle {
     font-weight: 600;
     color: var(--color-black);
-    line-height: 1.4;
+    line-height: 1.2;
   }
   
   .stickyNote.list .noteTitle {
@@ -179,19 +179,18 @@
   }
   
   .stickyNote.list .noteExpandedContent {
-    margin-left: 20px;
+    margin-left: 5px;
   }
   
   .noteDivider {
-    height: 2px;
+    height: 1px;
     background-color: var(--color-black);
     margin: 10px 0;
-    opacity: 0.3;
   }
   
   .noteDescription {
     color: var(--color-black);
-    line-height: 1.6;
+    line-height: 1.5;
     font-style: italic;
   }
   

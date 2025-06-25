@@ -1,53 +1,51 @@
+/* src/styles/common/Timeline.css */
+.timelineContainer {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: var(--color-beige-dark);
+}
 
-  
+.timelineWrapper {
+  max-width: 50rem;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 0.25rem;
+  background-color: var(--color-black);
+  opacity: 0.5;
+  border-radius: 0.125rem;
+}
+
+/* Tablet styles */
+@media (min-width: 48rem) {
   .timelineContainer {
-    min-height: 100vh;
-    padding: 2rem 1rem;
-    background-color: var(--color-beige-dark);
+    padding: 3rem 2rem;
   }
-  
+
   .timelineWrapper {
-    max-width: 50rem;
-    margin: 0 auto;
-    position: relative;
-    padding: 2rem 0;
+    max-width: 60rem;
   }
-  
+
   .timelineLine {
-    position: absolute;
-    left: 1.5rem;
-    top: 0;
-    bottom: 0;
-    width: 0.25rem;
-    background-color: var(--color-black);
-    opacity: 0.3;
-    border-radius: 0.125rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  
-  /* Tablet styles */
-  @media (min-width: 48rem) {
-    .timelineContainer {
-      padding: 3rem 2rem;
-    }
-  
-    .timelineWrapper {
-      max-width: 60rem;
-    }
-  
-    .timelineLine {
-      left: 50%;
-      transform: translateX(-50%);
-    }
+}
+
+/* Desktop styles */
+@media (min-width: 64rem) {
+  .timelineContainer {
+    padding: 4rem 2rem;
   }
-  
-  /* Desktop styles */
-  @media (min-width: 64rem) {
-    .timelineContainer {
-      padding: 4rem 2rem;
-    }
-  
-    .timelineWrapper {
-      max-width: 70rem;
-    }
+
+  .timelineWrapper {
+    max-width: 70rem;
   }
-  
+}

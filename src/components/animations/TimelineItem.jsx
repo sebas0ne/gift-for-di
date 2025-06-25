@@ -35,7 +35,7 @@ const TimelineItem = ({ image, title, subTitle, description, index }) => {
     <div
       ref={itemRef}
       className={`timelineItemContainer ${isVisible ? "timelineItemVisible" : ""}`}
-      style={{ "--animation-delay": `${index * 0.2}s` }}
+      style={{ "--animation-delay": `${(index * 0.2).toFixed(1)}s` }}
     >
       <div className="timelineItemDot"></div>
       <div className="timelineItemContent">
@@ -43,7 +43,7 @@ const TimelineItem = ({ image, title, subTitle, description, index }) => {
           <div className="polaroidFrame">
             <img src={image} alt={title} className="polaroidImageTimeline" />
             <div className="polaroidTitle">{subTitle}</div>
-            <div class="noteDivider"></div>
+            <div className="noteDivider"></div>
             <div className="polaroidSubTitle">{title}</div>
           </div>
         </div>

@@ -319,35 +319,35 @@ const constant =  {
     {
       "id": 2,
       "image":  "/images/movies/1.webp",
-      "title": "Segundo Hito",
+      "title": "Primer Hito",
       "description": "Descripción detallada del segundo hito importante. Este momento marcó un antes y un después en la cronología de eventos, estableciendo las bases para los desarrollos futuros y creando nuevas oportunidades de crecimiento.",
       "subTitle": "Junio del 2025"
     },
     {
       "id": 3,
       "image": "/images/movies/2.webp",
-      "title": "Tercer Logro",
+      "title": "Segundo Hito",
       "description": "El tercer logro representa un punto de inflexión crucial en esta historia. Aquí se consolidaron muchos de los esfuerzos anteriores y se abrieron nuevas posibilidades que antes parecían inalcanzables.",
       "subTitle": "Junio del 2025"
     },
     {
       "id": 4,
-      "image":  "/images/movies/3.webp",
-      "title": "Cuarto Evento",
+      "image": "/images/movies/3.webp",
+      "title": "Tercero Hito",
       "description": "Este cuarto evento significativo demuestra la evolución continua y el progreso constante. Cada paso ha sido fundamental para llegar hasta este punto y continuar avanzando hacia los objetivos establecidos.",
       "subTitle": "Junio del 2025"
     },
     {
       "id": 5,
-      "image": "/images/movies/2.webp",
-      "title": "Tercer Logro",
+      "image": "/images/movies/4.webp",
+      "title": "Cuarto Hito",
       "description": "El tercer logro representa un punto de inflexión crucial en esta historia. Aquí se consolidaron muchos de los esfuerzos anteriores y se abrieron nuevas posibilidades que antes parecían inalcanzables.",
       "subTitle": "Junio del 2025"
     },
     {
       "id": 6,
-      "image":  "/images/movies/3.webp",
-      "title": "Cuarto Evento",
+      "image": "/images/movies/5.webp",
+      "title": "Quinto Hito",
       "description": "Este cuarto evento significativo demuestra la evolución continua y el progreso constante. Cada paso ha sido fundamental para llegar hasta este punto y continuar avanzando hacia los objetivos establecidos.",
       "subTitle": "Junio del 2025"
     },

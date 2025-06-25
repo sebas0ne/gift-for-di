@@ -1,177 +1,177 @@
+/* src/styles/animations/TimelineItem.css */
 .timelineItemContainer {
-    position: relative;
-    margin-bottom: 3rem;
-    padding-left: 4rem;
-    opacity: 0;
-    transform: translateY(2rem);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition-delay: var(--animation-delay, 0s);
-  }
-  
-  .timelineItemVisible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .timelineItemDot {
-    position: absolute;
-    left: 0.75rem;
-    top: 1rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: var(--color-black);
-    border: 0.25rem solid var(--color-white);
-    border-radius: 50%;
-    z-index: 2;
-    transform: scale(0);
-    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-delay: calc(var(--animation-delay, 0s) + 0.3s);
-  }
-  
-  .timelineItemVisible .timelineItemDot {
-    transform: scale(1);
-  }
-  
-  .timelineItemContent {
-    background-color: var(--color-white);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    transform: scale(0.95);
-    transition: transform 0.6s ease, box-shadow 0.3s ease;
-  }
-  
-  .timelineItemVisible .timelineItemContent {
-    transform: scale(1);
-  }
-  
-  .timelineItemContent:hover {
-    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
-  }
-  
-  .polaroidContainerTimeline {
-    margin-bottom: 1.5rem;
-  }
-  
-  .polaroidFrame {
-    background-color: var(--color-white);
-    padding: 1rem 1rem 1rem 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
-    transform: rotate(-1deg);
-    transition: transform 0.3s ease;
-    max-width: 20rem;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-  
-  .polaroidFrame:hover {
-    transform: rotate(0deg) scale(1.02);
-  }
-  
-  .polaroidImageTimeline {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
-  }
-  
-  .polaroidTitle {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--color-black);
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 4rem;
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: var(--animation-delay, 0s);
+}
+
+.timelineItemVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timelineItemDot {
+  position: absolute;
+  left: 0.75rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--color-black);
+  border: 0.25rem solid var(--color-white);
+  border-radius: 50%;
+  z-index: 2;
+  transform: scale(0);
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-delay: calc(var(--animation-delay, 0s) + 0.2s);
+}
+
+.timelineItemVisible .timelineItemDot {
+  transform: scale(1);
+}
+
+.timelineItemContent {
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.timelineItemVisible .timelineItemContent {
+  transform: scale(1);
+}
+
+.timelineItemContent:hover {
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.polaroidContainerTimeline {
+  margin-bottom: 1.5rem;
+}
+
+.polaroidFrame {
+  background-color: var(--color-white);
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease;
+  max-width: 20rem;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.polaroidFrame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.polaroidImageTimeline {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.polaroidTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.polaroidSubTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.timelineItemDescription {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-black);
+  text-align: center;
+}
+
+/* Tablet styles */
+@media (min-width: 48rem) {
+  .timelineItemContainer {
+    width: 45%;
+    padding-left: 0;
+    margin-bottom: 4rem;
   }
 
-  .polaroidSubTitle {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--color-black);
+  .timelineItemContainer:nth-child(even) {
+    margin-left: 55%;
   }
+
+  .timelineItemContainer:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .timelineItemDot {
+    left: auto;
+    right: -0.75rem;
+  }
+
+  .timelineItemContainer:nth-child(even) .timelineItemDot {
+    right: auto;
+    left: -0.75rem;
+  }
+
+  .polaroidImageTimeline {
+    height: 15rem;
+  }
+
+  .timelineItemDescription {
+    font-size: 1.1rem;
+  }
+}
   
+/* Desktop styles */
+@media (min-width: 64rem) {
+  .timelineItemContainer {
+    margin-bottom: 5rem;
+  }
+
+  .polaroidFrame {
+    max-width: 25rem;
+  }
+
+  .polaroidImageTimeline {
+    height: 18rem;
+  }
+
+  .timelineItemContent {
+    padding: 2rem;
+  }
+
+  .polaroidTitle {
+    font-size: 1.1rem;
+  }
+
   .timelineItemDescription {
     font-size: 1.2rem;
-    line-height: 1.5;
-    color: var(--color-black);
-    text-align: center;
   }
-  
-  /* Tablet styles */
-  @media (min-width: 48rem) {
-    .timelineItemContainer {
-      width: 45%;
-      padding-left: 0;
-      margin-bottom: 4rem;
-    }
-  
-    .timelineItemContainer:nth-child(even) {
-      margin-left: 55%;
-    }
-  
-    .timelineItemContainer:nth-child(odd) {
-      margin-left: 0;
-    }
-  
-    .timelineItemDot {
-      left: auto;
-      right: -0.75rem;
-    }
-  
-    .timelineItemContainer:nth-child(even) .timelineItemDot {
-      right: auto;
-      left: -0.75rem;
-    }
-  
-    .polaroidImageTimeline {
-      height: 15rem;
-    }
-  
-    .timelineItemDescription {
-      font-size: 1.1rem;
-    }
+}
+
+/* Animation for mobile scroll */
+@media (max-width: 47.9375rem) {
+  .timelineItemContainer:nth-child(odd) {
+    transform: translateX(-1rem) translateY(2rem);
   }
-  
-  /* Desktop styles */
-  @media (min-width: 64rem) {
-    .timelineItemContainer {
-      margin-bottom: 5rem;
-    }
-  
-    .polaroidFrame {
-      max-width: 25rem;
-    }
-  
-    .polaroidImageTimeline {
-      height: 18rem;
-    }
-  
-    .timelineItemContent {
-      padding: 2rem;
-    }
-  
-    .polaroidTitle {
-      font-size: 1.1rem;
-    }
-  
-    .timelineItemDescription {
-      font-size: 1.2rem;
-    }
+
+  .timelineItemContainer:nth-child(even) {
+    transform: translateX(1rem) translateY(2rem);
   }
-  
-  /* Animation for mobile scroll */
-  @media (max-width: 47.9375rem) {
-    .timelineItemContainer:nth-child(odd) {
-      transform: translateX(-1rem) translateY(2rem);
-    }
-  
-    .timelineItemContainer:nth-child(even) {
-      transform: translateX(1rem) translateY(2rem);
-    }
-  
-    .timelineItemVisible:nth-child(odd),
-    .timelineItemVisible:nth-child(even) {
-      transform: translateX(0) translateY(0);
-    }
+
+  .timelineItemVisible:nth-child(odd),
+  .timelineItemVisible:nth-child(even) {
+    transform: translateX(0) translateY(0);
   }
-  
+}
