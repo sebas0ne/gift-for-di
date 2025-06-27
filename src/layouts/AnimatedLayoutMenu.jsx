@@ -8,7 +8,7 @@ function AnimatedLayoutMenu({ children, transitionName = 'bounceUp' }) {
   const transition = pageTransitions[transitionName];
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <Menu />
       <motion.div
         key={window.location.pathname}

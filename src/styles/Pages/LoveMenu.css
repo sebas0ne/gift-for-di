@@ -1,0 +1,455 @@
+
+  .loveMenuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-beige-dark);
+    margin-top: 4rem;
+    line-height: 1.2;
+  }
+  
+  /* Contenido Principal */
+  .mainContent {
+    padding: 2rem 1rem;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  
+  /* Header del Restaurante */
+  .restaurantHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .restaurantTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+  }
+  
+  .restaurantSubtitle {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+  }
+  
+  .menuTitle {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--color-black);
+  }
+  
+  /* Secciones del Menú */
+  .menuSection {
+    margin-bottom: 4rem;
+  }
+  
+  .categoryTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-black);
+    position: relative;
+  }
+  
+  .categoryTitle::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.125rem;
+    background-color: var(--color-black);
+    margin: 0.75rem auto;
+  }
+  
+  /* Grid del Menú */
+  .menuGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  /* Tarjeta del Menú */
+  .menuCard {
+    background-color: var(--color-white);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.75rem rgba(26, 26, 26, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .menuCard:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(26, 26, 26, 0.15);
+  }
+  
+  .cardImageContainer {
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .menuCard:hover .cardImage {
+    transform: scale(1.05);
+  }
+  
+  .cardContentMenu {
+    padding: 1.25rem;
+  }
+  
+  .cardHeader {
+    margin-bottom: 0.75rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-black);
+  }
+  
+  .cardCategory {
+    font-size: 1rem;
+    color: var(--color-black);
+    opacity: 0.7;
+    font-style: italic;
+  }
+  
+  .cardStory {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+    opacity: 0.8;
+  }
+  
+  .cardFooter {
+    border-top: 0.0625rem solid rgba(26, 26, 26, 0.4);
+    padding-top: 1rem;
+  }
+  
+  /* Botón de Favorito */
+  .favoriteButton {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--color-black);
+  }
+  
+  .favoriteButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .favoriteActive {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+  
+  .favoriteActive svg {
+    fill: currentColor;
+  }
+  
+  /* Rating de Corazones */
+  .heartRating {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .ratingLabel {
+    font-size: 1rem;
+    color: var(--color-black);
+    opacity: 0.7;
+  }
+  
+  .heartsContainer {
+    display: flex;
+    gap: 0.25rem;
+  }
+  
+  .heartButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.125rem;
+    transition: all 0.2s ease;
+    color: var(--color-black);
+    opacity: 0.3;
+  }
+  
+  .heartButton:hover {
+    transform: scale(1.2);
+  }
+  
+  .heartFilled {
+    opacity: 1;
+    color: #e74c3c;
+  }
+  
+  .heartFilled svg {
+    fill: currentColor;
+  }
+  
+  /* Modal */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 26, 26, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .modalContainer {
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 40rem;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    animation: slideInUp 0.3s ease-out;
+  }
+  
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 0.2rem solid rgba(26, 26, 26, 0.1);
+    position: sticky;
+    top: 0;
+    background-color: var(--color-white);
+    border-radius: 1rem 1rem 0 0;
+    z-index: 10;
+  }
+  
+  .modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-black);
+  }
+  
+  .modalCloseButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--color-black);
+    transition: background-color 0.2s ease;
+  }
+  
+  .modalCloseButton:hover {
+    background-color: rgba(26, 26, 26, 0.1);
+  }
+  
+  .modalContent {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .reportSection {
+    margin-bottom: 2rem;
+  }
+  
+  .reportSectionTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+  }
+  
+  .categoryReport {
+    margin-bottom: 1.5rem;
+  }
+  
+  .categoryReportTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: var(--color-black);
+    opacity: 0.8;
+  }
+  
+  .rankingList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .rankingItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    background-color: rgba(216, 202, 184, 0.2);
+    border-radius: 0.5rem;
+  }
+  
+  .rankingPosition {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .rankingInfo {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rankingName {
+    font-weight: 500;
+    color: var(--color-black);
+  }
+  
+  .rankingHearts {
+    display: flex;
+    gap: 0.125rem;
+  }
+  
+  .rankingHeart {
+    color: #e74c3c;
+    font-size: 0.875rem;
+  }
+  
+  .favoritesList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .favoriteItem {
+    padding: 0.5rem;
+    background-color: rgba(216, 202, 184, 0.2);
+    border-radius: 0.5rem;
+  }
+  
+  .favoriteName {
+    font-weight: 500;
+    color: var(--color-black);
+  }
+  
+  .emptyReport {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-black);
+    opacity: 0.7;
+  }
+  
+  .emptyReport p {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 48rem) {
+    .mainContent {
+      padding: 3rem 2rem;
+    }
+  
+    .menuGrid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  
+    .restaurantTitle {
+      font-size: 4rem;
+    }
+  
+    .cardImageContainer {
+      height: 14rem;
+    }
+  }
+  
+  @media (min-width: 64rem) {
+    .menuGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .cardImageContainer {
+      height: 16rem;
+    }
+
+    .mainContent {
+      max-width: 100%;
+    }
+  }
+  
+  @media (min-width: 80rem) {
+    .menuGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

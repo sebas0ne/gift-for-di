@@ -12,7 +12,7 @@ const PolaroidDisplay = ({ isVisible, onClose }) => {
   useEffect(() => {
     if (!isVisible) return;
 
-    const storedData = JSON.parse(localStorage.getItem('polaroidTracker')) || undefined;
+    const storedData = JSON.parse(localStorage.getItem(CONSTANT.keysLocalStorage.polaroidTracker)) || undefined;
     const todayKey = getTodayKey();
     let tracker = storedData;
     const lastDayKey = tracker ? tracker.lastDay : todayKey;
@@ -24,7 +24,7 @@ const PolaroidDisplay = ({ isVisible, onClose }) => {
         count: 0,
         lastDay: todayKey
       };
-      localStorage.setItem('polaroidTracker', JSON.stringify(tracker));
+      localStorage.setItem(CONSTANT.keysLocalStorage.polaroidTracker, JSON.stringify(tracker));
     }
     if (diffDays > 0) {
       tracker.countDaily = 0;
@@ -42,7 +42,7 @@ const PolaroidDisplay = ({ isVisible, onClose }) => {
           count: tracker.count,
           lastDay: tracker.lastDay
         };
-        localStorage.setItem('polaroidTracker', JSON.stringify(tracker));
+        localStorage.setItem(CONSTANT.keysLocalStorage.polaroidTracker, JSON.stringify(tracker));
         setIsLoading(true);
         setCurrentPolaroid(polaroidToShow);
     } else {

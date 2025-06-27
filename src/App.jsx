@@ -14,6 +14,7 @@ import Gift from './pages/Gift';
 import ThingsAboutYou from './pages/ThingsAboutYou';
 import WhyILoveYou from './pages/WhyILoveYou';
 import Timeline from './pages/Timeline';
+import LoveMenu from './pages/LoveMenu';
 
 import CONSTANT from './utils/constant';
 
@@ -44,7 +45,8 @@ function App() {
             <Route path="/movies" element={<AnimatedLayoutMenu><Movies /></AnimatedLayoutMenu>} />
             <Route path="/gift" element={<AnimatedLayoutMenu><Gift /></AnimatedLayoutMenu>} />
             <Route path="/whyILoveYou" element={<AnimatedLayoutMenu><WhyILoveYou /></AnimatedLayoutMenu>} />
-            <Route path="/timeline" element={<AnimatedLayoutMenu><Timeline /></AnimatedLayoutMenu>} />
+            <Route path="/timeline" element={<AnimatedLayoutMenu transitionName="portal"><Timeline /></AnimatedLayoutMenu>} />
+            <Route path="/loveMenu" element={<AnimatedLayoutMenu><LoveMenu /></AnimatedLayoutMenu>} />
           </Routes>
         )}
       </>

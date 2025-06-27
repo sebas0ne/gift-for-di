@@ -1,0 +1,46 @@
+
+.reportButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background: var(--color-white);
+  border: 1px solid var(--color-beige-dark);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.1);
+}
+
+.reportButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0.5rem 1rem rgba(26, 26, 26, 0.4);
+}
+
+.musicControlButton {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  background: var(--color-white);
+  border: 1px solid var(--color-beige-dark);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.1);
+}
+
+.musicControlButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.15);
+}

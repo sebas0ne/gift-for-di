@@ -1,6 +1,11 @@
 // src/utils/constant.js
 
 const constant =  {
+  "keysLocalStorage": {
+    "polaroidTracker": "polaroidSettings",
+    "menuRatings": "savedRatings",
+    "menuFavorites": "savedFavorites"
+  },
   "home": {
     "text": "¡FELIZ CUMPLE AMOR!",
     "principal": "Te recuerdo que llevamos",
@@ -11,7 +16,7 @@ const constant =  {
     "stars": "Un amor eterno, como las estrellas en el universo.",
     "goodNight": "De pronto es de noche, buenas noches mi amor!"
   },
-  "birthdayDate": "2025-07-01",
+  "birthdayDate": "2025-06-01",
   "daysTogether": "2023-10-21",
   "loaderText": "* MI AMOR * FELIZ CUMPLEAÑOS *",
   "heartText": "Mi corazón late por ti todos los días.",
@@ -149,6 +154,9 @@ const constant =  {
     { "title": "86: Mission Impossible Sentencia final", "image": "/images/movies/85.webp"},
     { "title": "87: Encerrado", "image": "/images/movies/86.webp"},
     { "title": "88: Bailarina", "image": "/images/movies/87.webp"},
+    { "title": "89: Como entrenar a tu dragón", "image": "/images/movies/88.webp"},
+    { "title": "90: 28 años después", "image": "/images/movies/89.webp"},
+    { "title": "91: F1 la película", "image": "/images/movies/90.webp"},
   ],
   "itemsMenu": [
     { "label": 'INICIO', "path": '/' },
@@ -156,6 +164,7 @@ const constant =  {
     { "label": 'POR QUÉ TE AMO?', "path": '/whyILoveYou' },
     { "label": '¿NOS GUSTA EL CINE?', "path": '/movies' },
     { "label": 'UN POCO DE HISTORIA', "path": '/timeline' },
+    { "label": 'NUESTRO MENÚ DEL AMOR', "path": '/loveMenu' },
     { "label": 'REGALO', "path": '/gift' },
   ],
   "gitTitle": "UNA CITA NOS ESPERA EN EL 2026...",
@@ -350,6 +359,149 @@ const constant =  {
       "title": "Quinto Hito",
       "description": "Este cuarto evento significativo demuestra la evolución continua y el progreso constante. Cada paso ha sido fundamental para llegar hasta este punto y continuar avanzando hacia los objetivos establecidos.",
       "subTitle": "Junio del 2025"
+    },
+  ],
+  "reportModalMenu": {
+    "categories": ["Entradas", "Principal", "Postres", "Bebidas"],
+    "headerTitle": "RESUMEN",
+    "reportSection": {
+      "Heart": "TOP DE CORAZONES",
+      "Star": "FAVORITOS",
+    },
+    "emptyReport": {
+      "text_1": "Aún no hay lugares puntuados o marcados como favoritos.",
+      "text_2": "Comienza a explorar nuestro menú del amor.",
+    }
+  },
+  "menuData": [
+    // Entradas
+    {
+      "id": 1,
+      "name": "ENTRADA 1",
+      "category": "Entradas",
+      "image": "/images/movies/0.webp",
+      "story":
+        "Donde todo comenzó, entre arena blanca y aguas cristalinas. Nuestros primeros pasos juntos bajo el sol caribeño.",
+      "rating": 0,
+    },
+    {
+      "id": 2,
+      "name": "ENTRADA 2",
+      "category": "Entradas",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "El lugar donde nos conocimos realmente. Entre risas y café con leche, descubrimos que teníamos mucho en común.",
+      "rating": 0,
+    },
+    {
+      "id": 3,
+      "name": "ENTRADA 3",
+      "category": "Entradas",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Nuestras primeras caminatas largas, hablando de sueños y planes futuros mientras alimentábamos a los patos.",
+      "rating": 0,
+    },
+    {
+      "id": 4,
+      "name":"ENTRADA 4",
+      "category": "Entradas",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Nuestras primeras caminatas largas, hablando de sueños y planes futuros mientras alimentábamos a los patos.",
+      "rating": 0,
+    },
+    // Principal
+    {
+      "id": 5,
+      "name": "PRINCIPAL 1",
+      "category": "Principal",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Donde conociste a mi familia por primera vez. La abuela te adoptó inmediatamente y te enseñó su receta secreta.",
+      "rating": 0,
+    },
+    {
+      "id": 6,
+      "name": "PRINCIPAL 2",
+      "category": "Principal",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Nuestro lugar especial para ver atardeceres. Aquí decidimos que queríamos construir algo juntos para siempre.",
+      "rating": 0,
+    },
+    {
+      "id": 7,
+      "name": "PRINCIPAL 3",
+      "category": "Principal",
+      "image": "/images/movies/0.WEBP",
+      "story": "Donde compramos flores para decorar nuestro primer apartamento. Cada ramo tenía un significado especial.",
+      "rating": 0,
+    },
+    // Postres
+    {
+      "id": 8,
+      "name": "POSTRE 1",
+      "category": "Postres",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Nuestro refugio en días calurosos. Siempre pedías chocolate y yo vainilla, pero terminábamos compartiendo ambos.",
+      "rating": 0,
+    },
+    {
+      "id": 9,
+      "name": "POSTRE 2",
+      "category": "Postres",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Donde pasamos tardes enteras leyendo juntos. Descubrimos que compartíamos el amor por las mismas historias.",
+      "rating": 0,
+    },
+    {
+      "id": 10,
+      "name": "POSTRE 3",
+      "category": "Postres",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Nuestro escape de la ciudad. Entre flores y mariposas, encontramos la paz que necesitábamos para crecer juntos.",
+      "rating": 0,
+    },
+    // Bebidas
+    {
+      "id": 11,
+      "name": "BEBIDA 1",
+      "category": "Bebidas",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Donde celebramos nuestros logros y brindamos por el futuro. La vista nocturna siempre nos dejaba sin palabras.",
+      "rating": 0,
+    },
+    {
+      "id": 12,
+      "name": "BEBIDA 2",
+      "category": "Bebidas",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Nuestro lugar para desayunos saludables. Siempre pedíamos el jugo verde que nos daba energía para todo el día.",
+      "rating": 0,
+    },
+    {
+      "id": 13,
+      "name": "BEBIDA 3",
+      "category": "Bebidas",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Donde íbamos cuando no podíamos dormir. Entre conversaciones profundas y café descafeinado, resolvíamos el mundo.",
+      "rating": 0,
+    },
+    {
+      "id": 14,
+      "name": "BEBIDA 4",
+      "category": "Bebidas",
+      "image": "/images/movies/0.WEBP",
+      "story":
+        "Donde íbamos cuando no podíamos dormir. Entre conversaciones profundas y café descafeinado, resolvíamos el mundo.",
+      "rating": 0,
     },
   ]
 }
