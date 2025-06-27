@@ -16,7 +16,7 @@ const constant =  {
     "stars": "Un amor eterno, como las estrellas en el universo.",
     "goodNight": "De pronto es de noche, buenas noches mi amor!"
   },
-  "birthdayDate": "2025-07-01",
+  "birthdayDate": "2025-06-01",
   "daysTogether": "2023-10-21",
   "loaderText": "* MI AMOR * FELIZ CUMPLEAÑOS *",
   "heartText": "Mi corazón late por ti todos los días.",
@@ -268,22 +268,37 @@ const constant =  {
       "title": "Tu amor por los detalles...",
       "content": "Te fijas en cosas que los demás no notan. Desde lo que me gusta comer, hasta cómo me siento solo por mi mirada. Amo esa atención hasta por lo más minimo, me hace sentir especial y amado."
     },
-  ],
-  "secretThings": [
     {
       "id": 10,
-      "title": "El momento exacto en que me enamoré...",
-      "content": "Fue cuando te vi ayudar a ese gatito perdido. En ese instante supe que tenías el corazón más hermoso del mundo.",
+      "title": "Tu brillo...",
+      "content": "Cuando hablas de lo que amas y a quien amas, se te iluminan los ojos. Ese brillo que se va asomando en tu rostro es de las cosas más bellas que he visto.",
     },
     {
       "id": 11,
-      "title": "Tu sonrisa de las mañanas...",
-      "content": "Incluso despeinada y con los ojos hinchados, sigues siendo la vista más hermosa con la que podría despertar.",
-    },
+      "title": "Cómo tomas mi mano...",
+      "content": "En silencio, caminando o viendo una peli, tu mano encaja sobre la mía de manera perfecta, en esos momentos siento que somos nosotros contra el mundo y nadie ni nada nos podría separar."
+    }
+  ],
+  "secretThings": [
     {
       "id": 12,
-      "title": "La manera en que pintas tus uñas...",
-      "content": "Con tanta paciencia y dedicación, como si fueras una artista creando su obra maestra.",
+      "title": "Porque eres tú...",
+      "content": "No hay una sola razón que pueda elegir. Te amo por cada cosa, cada gesto, cada detalle, cada parte de ti que simplemente te hace ser tú."
+    },
+    {
+      "id": 13,
+      "title": "Cómo celebras mis logros...",
+      "content": "Te alegras como si fueran tuyos. Me haces sentir apoyado, admirado y profundamente acompañado, es algo muy valioso para mi por lo que es importante resaltarlo."
+    },
+    {
+      "id": 14,
+      "title": "Tu amor constante...",
+      "content": "A pesar del tiempo, de las pruebas, de los cambios, de los desacuerdos, de las dificultades, tu amor permanece, y eso lo valoro cada día."
+    },
+    {
+      "id": 14,
+      "title": "Tu amor constante2...",
+      "content": "A pesar del tiempo, de las pruebas, de los cambios, de los desacuerdos, de las dificultades, tu amor permanece, y eso lo valoro cada día."
     }
   ],
   "whyILoveYouPage": {

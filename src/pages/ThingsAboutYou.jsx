@@ -34,18 +34,23 @@ export default function ThingsAboutYou() {
   }
 
   const revealSecretNote = () => {
-    if (!canRevealSecret || secretRevealed) return
-
-    const randomSecret = CONSTANT.secretThings[Math.floor(Math.random() * CONSTANT.secretThings.length)]
-    setNotes((prev) => [randomSecret, ...prev])
-
+    if (!canRevealSecret || secretRevealed) return;
+  
+    const storedIndex = parseInt(localStorage.getItem("secretNoteIndex") || "0", 10);
+    const nextIndex = storedIndex % CONSTANT.secretThings.length;
+    const nextSecret = CONSTANT.secretThings[nextIndex];
+  
+    setNotes((prev) => [nextSecret, ...prev]);
+  
     const today = new Date().toLocaleDateString('sv-SE');
-    localStorage.setItem("lastSecretReveal", today)
-    localStorage.setItem("secretRevealedToday", "true")
-
-    setCanRevealSecret(false)
-    setSecretRevealed(true)
-  }
+    localStorage.setItem("lastSecretReveal", today);
+    localStorage.setItem("secretRevealedToday", "true");
+  
+    localStorage.setItem("secretNoteIndex", (nextIndex + 1).toString());
+  
+    setCanRevealSecret(false);
+    setSecretRevealed(true);
+  };
 
   return (
     <div className="pageContainer">
