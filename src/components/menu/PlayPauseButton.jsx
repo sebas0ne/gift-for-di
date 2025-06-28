@@ -12,37 +12,36 @@ function PlayPauseButton({ musicPath }) {
     audio.loop = true
     audio.volume = 0.3
     audioRef.current = audio
-
-    const handleCanPlay = () => {
-      setAudioLoaded(true)
-    }
-
+  
+    const handleCanPlay = () => setAudioLoaded(true)
     const handleError = () => {
       console.log("Audio file not found, using silence")
       setAudioLoaded(true)
     }
-
+  
     audio.addEventListener("canplaythrough", handleCanPlay)
     audio.addEventListener("error", handleError)
-
+  
+    return () => {
+      audio.removeEventListener("canplaythrough", handleCanPlay)
+      audio.removeEventListener("error", handleError)
+      audio.pause()
+    }
+  }, [musicPath]);
+  
+  useEffect(() => {
     const playAudio = async () => {
       try {
-        await audio.play()
+        await audioRef.current?.play()
         setIsPlaying(true)
       } catch (error) {
         console.log("Auto-play prevented by browser")
         setIsPlaying(false)
       }
     }
-
-    if (audioLoaded) {
+  
+    if (audioLoaded && audioRef.current) {
       playAudio()
-    }
-
-    return () => {
-      audio.removeEventListener("canplaythrough", handleCanPlay)
-      audio.removeEventListener("error", handleError)
-      audio.pause()
     }
   }, [audioLoaded])
 
