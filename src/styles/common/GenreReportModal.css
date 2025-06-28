@@ -1,0 +1,21 @@
+.rankingStars {
+    display: flex;
+    gap: 0.125rem;
+  }
+  
+  .rankingStar {
+    color: gold;
+    font-size: 1rem;
+  }
+  
+  .rankingStar.half {
+    position: relative;
+  }
+  .rankingStar.half::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: gold;
+  }

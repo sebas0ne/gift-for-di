@@ -1,4 +1,4 @@
-/* components/PolaroidDisplay.css */
+/* src/styles/common/PolaroidDisplay.css */
 
 .polaroidBackdrop {
     position: fixed;
@@ -40,7 +40,7 @@
   }
   
   .polaroidCaption {
-    margin-top: 0.75rem;
+    margin-top: 0.95rem;
     font-size: 1.3rem;
     color: var(--color-black);
     font-weight: 600;
@@ -58,6 +58,78 @@
   
   .polaroidImage.hidden {
     display: none;
+  }
+
+  .polaroidSeparator {
+    width: 80%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0.75rem auto;
+  }
+  
+  .polaroidGenres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .genreTag {
+    background-color: var(--color-beige-dark);
+    color: var(--color-white);
+    padding: 0.3rem 0.6rem;
+    border-radius: 9999px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .starRatingContainer {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  
+  .starWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 2.2rem;
+  }
+  
+  .star {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    transition: color 0.2s;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .star.filled {
+    color: gold;
+    -webkit-text-stroke: 1px gold;
+  }
+  
+  .star.half::before {
+    content: "★";
+    position: absolute;
+    color: gold;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  .halfStarArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
   }
   
   @keyframes spin {
