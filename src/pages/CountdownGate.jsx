@@ -15,9 +15,13 @@ function CountdownGate({ targetDate, onComplete }) {
   const formatTime = (value) => String(value ?? 0).padStart(2, '0');
 
   const calculateTimeLeft = useCallback(() => {
-    const difference = +new Date(targetDate) - +new Date();
+    const [year, month, day] = targetDate.split('-').map(Number);
+    const target = new Date(Date.UTC(year, month - 1, day, 5, 0, 0));
+    const now = new Date();
+  
+    const difference = target - now;
     if (difference <= 0) return {};
-
+  
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
