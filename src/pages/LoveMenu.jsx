@@ -60,7 +60,7 @@ function LoveMenu() {
 
   return (
     <div className="loveMenuContainer">
-      <PlayPauseButton />
+      <PlayPauseButton musicPath={CONSTANT.musicPath.loveMenu} />
 
       <button className="reportButton" onClick={() => setIsModalOpen(true)} aria-label="Ver reporte">
         <FileText size={20} />

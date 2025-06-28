@@ -15,7 +15,6 @@ export default function ThingsAboutYou() {
   const totalSecrets = CONSTANT.secretThings.length;
   const [viewMode, setViewMode] = useState("grid");
 
-  // Check daily secret only once when component mounts
   useEffect(() => {
     checkDailySecret();
   }, []);

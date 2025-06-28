@@ -34,7 +34,6 @@ const WhyILoveYou = () => {
     audio.addEventListener("canplaythrough", handleCanPlay)
     audio.addEventListener("error", handleError)
 
-    // Auto-play attempt
     const playAudio = async () => {
       try {
         await audio.play()
@@ -56,7 +55,6 @@ const WhyILoveYou = () => {
     }
   }, [audioLoaded])
 
-  // Toggle audio
   const toggleAudio = async () => {
     if (!audioRef.current) return
 

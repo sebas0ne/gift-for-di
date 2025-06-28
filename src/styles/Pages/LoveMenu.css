@@ -340,6 +340,9 @@
   .rankingName {
     font-weight: 500;
     color: var(--color-black);
+    word-break: break-word;
+    white-space: normal;
+    max-width: 20rem;
   }
   
   .rankingHearts {

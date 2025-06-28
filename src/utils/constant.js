@@ -22,6 +22,10 @@ const constant =  {
   "heartText": "Mi corazón late por ti todos los días.",
   "titleCountdown": "* ESTE REGALO * SE DESBLOQUEA * EN ",
   "maxImgDaily": 3,
+  "musicPath": {
+    "movies": "/music/EmpireStateOfMind.mp3",
+    "loveMenu": "/music/Le_Festin.mp3"
+  },
   "defaultImage": {
     "src": "/images/come-back-tomorrow.png",
     "description": "Lo siento mi amor es todo por hoy, regresa mañana por 3 fotos más.",
@@ -67,7 +71,7 @@ const constant =  {
   "pageTitleMovies": "NUESTRO LADO CINÉFILO",
   "movies": [
     { "title": "1. Barbie", "image": "/images/movies/0.webp", "movie_genres": ["Comedia", "Fantasía", "Aventura"] },
-    { "title": "2. Escabe bajo fuego", "image": "/images/movies/1.webp", "movie_genres": ["Acción", "Bélico"] },
+    { "title": "2. Escape bajo fuego", "image": "/images/movies/1.webp", "movie_genres": ["Acción", "Bélico"] },
     { "title": "3. Gran Turismo", "image": "/images/movies/2.webp", "movie_genres": ["Deporte", "Drama", "Acción"] },
     { "title": "4. Dobles de acción", "image": "/images/movies/3.webp", "movie_genres": ["Acción", "Comedia"] },
     { "title": "5. Los indestructibles 4", "image": "/images/movies/4.webp", "movie_genres": ["Acción"] },
