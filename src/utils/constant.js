@@ -489,132 +489,149 @@ const constant =  {
     // Entradas
     {
       "id": 1,
-      "name": "ENTRADA 1",
+      "name":"Siu Mai Especial",
       "category": "Entradas",
-      "image": "/images/movies/0.webp",
+      "image": "/images/menu/entrada-4.webp",
       "story":
-        "Donde todo comenzó, entre arena blanca y aguas cristalinas. Nuestros primeros pasos juntos bajo el sol caribeño.",
+        "4 Unidades de relleno de cerdo, langostinos y hongos chinos. *Considerar alergias, contiene langostinos.",
       "rating": 0,
     },
     {
       "id": 2,
-      "name": "ENTRADA 2",
+      "name": "Criollazas wings",
       "category": "Entradas",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/entrada-2.webp",
       "story":
-        "El lugar donde nos conocimos realmente. Entre risas y café con leche, descubrimos que teníamos mucho en común.",
+        "6 unidades flameadas en salsa anticuchera, acompañadas de ají rocoto.",
       "rating": 0,
     },
     {
       "id": 3,
-      "name": "ENTRADA 3",
+      "name": "Makis acevichados",
       "category": "Entradas",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/entrada-3.webp",
       "story":
-        "Nuestras primeras caminatas largas, hablando de sueños y planes futuros mientras alimentábamos a los patos.",
+        "Relleno de langostinos, palta y atún, y cubierto con una salsa acevichada.",
       "rating": 0,
     },
     {
       "id": 4,
-      "name":"ENTRADA 4",
+      "name": "Tiradito apalatado",
       "category": "Entradas",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/entrada-1.webp",
       "story":
-        "Nuestras primeras caminatas largas, hablando de sueños y planes futuros mientras alimentábamos a los patos.",
+        "Laminas de salmón y pulpo con ríquisima salsa nikei y palta en cubos flameados.",
       "rating": 0,
     },
     // Principal
     {
       "id": 5,
-      "name": "PRINCIPAL 1",
+      "name": "Lomo saltado",
       "category": "Principal",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/principal-1.webp",
       "story":
-        "Donde conociste a mi familia por primera vez. La abuela te adoptó inmediatamente y te enseñó su receta secreta.",
+        "Lomo saltado de lomo fino de Doomo Saltado.",
       "rating": 0,
     },
     {
       "id": 6,
-      "name": "PRINCIPAL 2",
+      "name": "Crispy Chicken Tacos",
       "category": "Principal",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/principal-2.webp",
       "story":
-        "Nuestro lugar especial para ver atardeceres. Aquí decidimos que queríamos construir algo juntos para siempre.",
+        "3 Tortillas con filetes crujientes de pollo, tocino, pico de gallo, quesos, lechuga, ranch y honey chipotle. Servidos con frijoles negros y arroz.",
       "rating": 0,
     },
     {
       "id": 7,
-      "name": "PRINCIPAL 3",
+      "name": "El capitan pollero",
       "category": "Principal",
-      "image": "/images/movies/0.WEBP",
-      "story": "Donde compramos flores para decorar nuestro primer apartamento. Cada ramo tenía un significado especial.",
+      "image": "/images/menu/principal-3.webp",
+      "story": "Milanesa de pollo, arroz con choclo, huevos, plátano y cole slaw.",
+      "rating": 0,
+    },
+    {
+      "id": 8,
+      "name": "Tacu Tacu Saltado",
+      "category": "Principal",
+      "image": "/images/menu/principal-4.webp",
+      "story": "Tacu tacu (una mezcla de arroz y frijoles fritos) con lomo saltado, un salteado de carne con cebolla, tomate y ají amarillo",
       "rating": 0,
     },
     // Postres
     {
-      "id": 8,
-      "name": "POSTRE 1",
-      "category": "Postres",
-      "image": "/images/movies/0.WEBP",
-      "story":
-        "Nuestro refugio en días calurosos. Siempre pedías chocolate y yo vainilla, pero terminábamos compartiendo ambos.",
-      "rating": 0,
-    },
-    {
       "id": 9,
-      "name": "POSTRE 2",
+      "name": "Chocolate caliente estilo NY",
       "category": "Postres",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/postre-1.webp",
       "story":
-        "Donde pasamos tardes enteras leyendo juntos. Descubrimos que compartíamos el amor por las mismas historias.",
+        "Servida en un vaso al que se le coloca merengue suizo en el borde y se flambea.",
       "rating": 0,
     },
     {
       "id": 10,
-      "name": "POSTRE 3",
+      "name": "Croissant de pistacho",
       "category": "Postres",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/postre-2.webp",
       "story":
-        "Nuestro escape de la ciudad. Entre flores y mariposas, encontramos la paz que necesitábamos para crecer juntos.",
+        "Croissant planos de pistacho y chocolate con avellanas.",
+      "rating": 0,
+    },
+    {
+      "id": 11,
+      "name": "Turrón de Chocolate ",
+      "category": "Postres",
+      "image": "/images/menu/postre-3.webp",
+      "story":
+        "Turrón de Chocolate suave, amelcochado y cubierto de fudge y pecanas.",
       "rating": 0,
     },
     // Bebidas
     {
-      "id": 11,
-      "name": "BEBIDA 1",
-      "category": "Bebidas",
-      "image": "/images/movies/0.WEBP",
-      "story":
-        "Donde celebramos nuestros logros y brindamos por el futuro. La vista nocturna siempre nos dejaba sin palabras.",
-      "rating": 0,
-    },
-    {
       "id": 12,
-      "name": "BEBIDA 2",
+      "name": "Papasito",
       "category": "Bebidas",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/bebida-1.webp",
       "story":
-        "Nuestro lugar para desayunos saludables. Siempre pedíamos el jugo verde que nos daba energía para todo el día.",
+        "Uva borgoña, piña golden, zumo de frutas cítricas e infusión de hierbas.",
       "rating": 0,
     },
     {
       "id": 13,
-      "name": "BEBIDA 3",
+      "name": "Jugo de naranja",
       "category": "Bebidas",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/bebida-2.WEBP",
       "story":
-        "Donde íbamos cuando no podíamos dormir. Entre conversaciones profundas y café descafeinado, resolvíamos el mundo.",
+        "Jugo de naranja de 16 oz sabor natural y vitaminas.",
       "rating": 0,
     },
     {
       "id": 14,
-      "name": "BEBIDA 4",
+      "name": "Manzana verde G/B Tea",
       "category": "Bebidas",
-      "image": "/images/movies/0.WEBP",
+      "image": "/images/menu/bebida-4.WEBP",
       "story":
-        "Donde íbamos cuando no podíamos dormir. Entre conversaciones profundas y café descafeinado, resolvíamos el mundo.",
+        "Elaborados a base de té y zumo de fruta de manzana.",
       "rating": 0,
     },
+    {
+      "id": 15,
+      "name": "Mango G/B Tea",
+      "category": "Bebidas",
+      "image": "/images/menu/bebida-5.WEBP",
+      "story":
+        "Elaborados a base de té y zumo de fruta de mango.",
+      "rating": 0,
+    },
+    {
+      "id": 16,
+      "name": "Mango dragon fruit",
+      "category": "Bebidas",
+      "image": "/images/menu/bebida-3.WEBP",
+      "story":
+        "Bebida elaborada con concentrado de café verde sabor a mango, mezclado con pitahaya deshidratada.",
+      "rating": 0,
+    }
   ]
 }
 

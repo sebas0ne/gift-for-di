@@ -15,6 +15,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(26, 26, 26, 0.1);
+  color: var(--color-black);
 }
 
 .audioControlButton:hover {

@@ -12,7 +12,7 @@ function MenuCard({ item, isFavorite, onRatingChange, onFavoriteToggle }) {
 
       <div className="cardContentMenu">
         <div className="cardHeader">
-          <h4 className="cardTitle">{item.name}</h4>
+          <h4 className="cardTitleMenu">{item.name}</h4>
           <span className="cardCategory">{item.category}</span>
         </div>
 

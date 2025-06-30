@@ -69,7 +69,7 @@ function LoveMenu() {
       <main className="mainContent">
         <div className="restaurantHeader">
           <h1 className="restaurantTitle">S&D LA RUTA DEL SABOR</h1>
-          <p className="restaurantSubtitle">Cocina del Corazón</p>
+          <p className="restaurantSubtitle">Un pequeño recorrido por tus platos preferidos, elegido para ti con mucho esfuerzo y amor.</p>
           <h2 className="menuTitle">MENÚ</h2>
         </div>
 
