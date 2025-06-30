@@ -16,7 +16,7 @@ const constant =  {
     "stars": "Un amor eterno, como las estrellas en el universo.",
     "goodNight": "De pronto es de noche, buenas noches mi amor!"
   },
-  "birthdayDate": "2025-06-01",
+  "birthdayDate": "2025-07-01",
   "daysTogether": "2023-10-21",
   "loaderText": "* MI AMOR * FELIZ CUMPLEAÑOS *",
   "heartText": "Mi corazón late por ti todos los días.",
@@ -165,11 +165,11 @@ const constant =  {
   "itemsMenu": [
     { "label": 'INICIO', "path": '/' },
     { "label": 'COSAS QUE AMO DE TI', "path": '/thingsAboutYou' },
-    { "label": 'POR QUÉ TE AMO?', "path": '/whyILoveYou' },
+    // { "label": 'POR QUÉ TE AMO?', "path": '/whyILoveYou' },
     { "label": '¿NOS GUSTA EL CINE?', "path": '/movies' },
     { "label": 'UN POCO DE HISTORIA', "path": '/timeline' },
-    { "label": 'NUESTRO MENÚ DEL AMOR', "path": '/loveMenu' },
-    { "label": 'REGALO', "path": '/gift' },
+    { "label": 'LA RUTA DEL SABOR', "path": '/loveMenu' },
+    { "label": '¿REGALO?', "path": '/gift' },
   ],
   "gitTitle": "UNA CITA NOS ESPERA EN EL 2026...",
   "qrImages": [
@@ -307,7 +307,7 @@ const constant =  {
     {
       "id": 1,
       "title": "Te amo porque me haces mejor...",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "content": "Porque me haces mejor persona, mejor pareja. Desde que llegaste, tengo más paciencia, más sueños, más ganas de crecer... y menos excusas para quedarme en mi zona de confort. Gracias por hacer de mi caos algo hermoso, por hacerme querer mejorar cada día, y por amar todas mis versiones.",
     },
     {
       "id": 2,
@@ -434,39 +434,39 @@ const constant =  {
       "id": 15,
       "image": "/images/timeline/hito-14.webp",
       "title": "Mi foto de favorita de ti",
-      "description": "Simplemente tú, captada por el lente del tefono de mi cara, no existen las palabras correctas con las que pueda explicar esta foto, me encantas nena.",
+      "description": "Simplemente tú, captada por el lente de la camara de mi teléfono, no existen las palabras correctas con las que pueda explicar esta foto, me encantas nena.",
       "subTitle": "14 de abril del 2024"
     },
     {
-      "id": 15,
+      "id": 16,
       "image": "/images/timeline/hito-15.webp",
       "title": "Tu cumpleaños",
       "description": "Otra fecha muy especial para ti, pensar en cada regalo, en cada detalle del día, en cada cosa que te puede hacer bien, que te puede gustar fue una gran misión. Creo que lo hice bien.",
       "subTitle": "1 de julio del 2024"
     },
     {
-      "id": 15,
+      "id": 17,
       "image": "/images/timeline/hito-16.webp",
       "title": "Primer viaje juntos",
       "description": "Tumbados uno sobre el otro, cansados pero felices de visitar nuevos lugares juntos, de descubrirnos, de amarnos, de cuidarnos. Un viaje que recuerdo con cariño, y que disfrute muchisimo vivirlo contigo.",
       "subTitle": "18 de agosto del 2024"
     },
     {
-      "id": 16,
+      "id": 18,
       "image": "/images/timeline/hito-17.webp",
       "title": "Barranca",
       "description": "Segundo año nuevo pasandole en Barranca, de camino a un lugar al que no pudimos llegar, las risas nos faltaron, muchas fotos tomamos, los besos a montones aparecieron, pero sobre todo tu y yo manejando en la ruta, en la trocha, no puedo pedir más.",
       "subTitle": "29 de diciembre del 2024"
     },
     {
-      "id": 17,
+      "id": 19,
       "image": "/images/timeline/hito-18.webp",
       "title": "La busqueda por Stitch",
       "description": "En el cine a unos minutos de ver el Live Action de Stitch, después de luchar por esa palomera tan anhelada por ti, logré conseguirla, me di cuenta que valió todo el esfuerzo justo en el momento que vi tu rostro, mucho de las cosas que me esfuerzo por ti son para eso, tu retribución natural es dejarme ver tu sonrisa, admirar tu felicidad, estoy muy agradecido con eso.",
       "subTitle": "22 de mayo del 2025"
     },
     {
-      "id": 18,
+      "id": 20,
       "image": "/images/timeline/hito-19.webp",
       "title": "Día de arte",
       "description": "Planeaste la mejor cita que hemos tenido, disfrute como un niño a tu lado, fui feliz, fui yo, todo gracias a ti mi vida, te amo. Pero lo que más ilusión me hace son todas las ilustraciones que usaremos de decoración en el hogar que formemos juntos.",
