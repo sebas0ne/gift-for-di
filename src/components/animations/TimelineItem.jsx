@@ -5,6 +5,7 @@ import "../../styles/animations/TimelineItem.css"
 const TimelineItem = ({ image, title, subTitle, description, index }) => {
   const itemRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,13 +36,14 @@ const TimelineItem = ({ image, title, subTitle, description, index }) => {
     <div
       ref={itemRef}
       className={`timelineItemContainer ${isVisible ? "timelineItemVisible" : ""}`}
-      style={{ "--animation-delay": `${(index * 0.2).toFixed(1)}s` }}
+      style={{ "--animation-delay": `${(index * 0.05).toFixed(1)}s` }}
     >
       <div className="timelineItemDot"></div>
       <div className="timelineItemContent">
         <div className="polaroidContainerTimeline">
           <div className="polaroidFrame">
-            <img src={image} alt={title} className="polaroidImageTimeline" />
+          {isLoading && <div className="polaroidLoader"></div>}
+            <img src={image} alt={title} className="polaroidImageTimeline" onLoad={() => setIsLoading(false)} />
             <div className="polaroidTitle">{subTitle}</div>
             <div className="noteDivider"></div>
             <div className="polaroidSubTitle">{title}</div>
