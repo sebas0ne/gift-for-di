@@ -16,7 +16,7 @@ const constant =  {
     "stars": "Un amor eterno, como las estrellas en el universo.",
     "goodNight": "De pronto es de noche, buenas noches mi amor!"
   },
-  "birthdayDate": "2025-07-01",
+  "birthdayDate": "2025-06-01",
   "daysTogether": "2023-10-21",
   "loaderText": "* MI AMOR * FELIZ CUMPLEAÑOS *",
   "heartText": "Mi corazón late por ti todos los días.",
@@ -297,7 +297,7 @@ const constant =  {
     {
       "id": 14,
       "title": "Tu amor constante...",
-      "content": "A pesar del tiempo, de las pruebas, de los cambios, de los desacuerdos, de las dificultades, tu amor permanece, y eso lo valoro cada día."
+      "content": "A pesar del tiempo, de las pruebas, de los cambios, de los desacuerdos, de las dificultades, tu amor permanece, y eso lo valoro cada día que paso a tu lado."
     }
   ],
   "whyILoveYouPage": {
@@ -335,44 +335,142 @@ const constant =  {
     {
       "id": 1,
       "image": "/images/primera-cita-1.png",
-      "title": "Nuestra primera cita.",
-      "description": "Esta es la descripción del primer momento importante en nuestra historia. Aquí puedes contar todos los detalles relevantes que sucedieron en esta fecha específica y por qué fue tan significativo para el desarrollo de los eventos posteriores.",
-      "subTitle": "Junio del 2025"
+      "title": "Nuestra inicio cinéfilo",
+      "description": "Esta pelicula llego en forma de excusa perfecta para invitarte a salir, cuide cada detalle, oculte mis nervios y brinde la mejor versión de mi para impresionarte, tenia la certeza que verias en mi cosas que podrían llamarte la atención y creo que no me equivoque.",
+      "subTitle": "24 de julio del 2023"
     },
     {
       "id": 2,
-      "image":  "/images/movies/1.webp",
-      "title": "Primer Hito",
-      "description": "Descripción detallada del segundo hito importante. Este momento marcó un antes y un después en la cronología de eventos, estableciendo las bases para los desarrollos futuros y creando nuevas oportunidades de crecimiento.",
-      "subTitle": "Junio del 2025"
+      "image":  "/images/timeline/hito-1.webp",
+      "title": "Primer paso...",
+      "description": "¿Recuerdas este día? La primera vez que nos sujetamos de la mano, que nos dimos un abrazo. Te vi y a pesar que no fue tu mejor día, me di cuenta que me estaba enamorando y que se asomaba el comienzo de un camino a tu lado.",
+      "subTitle": "23 de agosto del 2023"
     },
     {
       "id": 3,
-      "image": "/images/movies/2.webp",
-      "title": "Segundo Hito",
-      "description": "El tercer logro representa un punto de inflexión crucial en esta historia. Aquí se consolidaron muchos de los esfuerzos anteriores y se abrieron nuevas posibilidades que antes parecían inalcanzables.",
-      "subTitle": "Junio del 2025"
+      "image": "/images/timeline/hito-2.webp",
+      "title": "La cosa se pone seria",
+      "description": "Pase a recogerte en el carro a la universidad, teniamos una charla espectacular, cruzabamos miradas y sonsiras picaras, de pronto nos cruzamos con tus padres a los que habíamos evitado yendo por otra ruta, como si el destino nos diera la contra, en ese momento mori de verguenza, esta nervioso... todo de pensar que tenia aquel sticker pegado al parabrisas trasero, fue el momento que vi que todo contigo era en serio, era real.",
+      "subTitle": "31 de agosto del 2023"
     },
     {
       "id": 4,
-      "image": "/images/movies/3.webp",
-      "title": "Tercero Hito",
-      "description": "Este cuarto evento significativo demuestra la evolución continua y el progreso constante. Cada paso ha sido fundamental para llegar hasta este punto y continuar avanzando hacia los objetivos establecidos.",
-      "subTitle": "Junio del 2025"
+      "image": "/images/timeline/hito-3.webp",
+      "title": "Tiempo juntos",
+      "description": "Fuimos a casa de Nat a pasar el rato y comer algo, un plan simple pero que a tu lado se volvía el mejor plan de la vida, me sentí en una historia de amor juvenil. Poco a poco me daba cuenta que amaba pasar esos momentos contigo.",
+      "subTitle": "7 de septiembre del 2023"
     },
     {
       "id": 5,
-      "image": "/images/movies/4.webp",
-      "title": "Cuarto Hito",
-      "description": "El tercer logro representa un punto de inflexión crucial en esta historia. Aquí se consolidaron muchos de los esfuerzos anteriores y se abrieron nuevas posibilidades que antes parecían inalcanzables.",
-      "subTitle": "Junio del 2025"
+      "image": "/images/timeline/hito-4.webp",
+      "title": "Días en casa",
+      "description": "De las primeras veces que pasabamos tiempo juntos en tu casa a hurtadillas, nos dabamos una cantidad de amor inexplicable, conversabamos de cosas banales, profundas... se respiraba amor por doquier y para cerrar el día de la mejor manera, preparaste la cena con tal cariño y amor, que tenia que sacar el teléfono para tomar una foto y recordar este gran día.",
+      "subTitle": "22 de septiembre del 2023"
     },
     {
       "id": 6,
-      "image": "/images/movies/5.webp",
-      "title": "Quinto Hito",
-      "description": "Este cuarto evento significativo demuestra la evolución continua y el progreso constante. Cada paso ha sido fundamental para llegar hasta este punto y continuar avanzando hacia los objetivos establecidos.",
-      "subTitle": "Junio del 2025"
+      "image": "/images/timeline/hito-5.webp",
+      "title": "Mi cumpleaños",
+      "description": "Aún no eramos novios oficiales pero quedaban pocos días para eso, ese día vi tus ojos brillar como un par de faros de que guían a los barcos en un niebla muy espesa, el esfuerzo que te tomaste para que todo saliera perfecto, cada regalo, cada detalle, todo tenia un motivo y un significado, me senti muy querido, feliz y deseando que cada cumpleaños a partir de ahora fuera así, y eso es algo que siempre te voy agradecer.",
+      "subTitle": "17 de octubre del 2023"
+    },
+    {
+      "id": 7,
+      "image": "/images/timeline/hito-6.webp",
+      "title": "Circuito mágico del agua I",
+      "description": "Para este punto caminar contigo de la mano se había vuelto una de mis actividades favoritas, este día la pase muy bien, estaba muy orgulloso de tenerte a mi lado, nos reiamos como unos niños, nos  mirabamos con amor, nos dabamos amor, definitivamente comenzabamos a ser el complemento perfecto.",
+      "subTitle": "27 de octubre del 2023"
+    },
+    {
+      "id": 8,
+      "image": "/images/timeline/hito-7.webp",
+      "title": "Final feliz",
+      "description": "Estoy un 80% seguro de que recuerdas porque literalmente estabas saltando de felicidad.",
+      "subTitle": "7 de noviembre del 2023"
+    },
+    {
+      "id": 9,
+      "image": "/images/timeline/hito-8.webp",
+      "title": "Full day en Ica",
+      "description": "Era el primer full day al que ibamos juntos, mi primera vez visitando Ica y su Huacachina, claramente no pude tener mejor acompañante que tú. Este día nos conocimos muchisimo más, sobre todo te conoci en todas tus facetas y ame cada una de ellas.",
+      "subTitle": "10 de noviembre del 2023"
+    },
+    {
+      "id": 10,
+      "image": "/images/timeline/hito-9.webp",
+      "title": "Bellas durmientes",
+      "description": "Un momento que tampoco podía dejar pasar sin sacar una foto, verte ahí tan tranquila tomando una sietas con Tilza a tu lado. Me inspiraba ternura y amor, no podía dejar de verte y sonreir como un tonto.",
+      "subTitle": "24 de noviembre del 2023"
+    },
+    {
+      "id": 11,
+      "image": "/images/timeline/hito-10.webp",
+      "title": "Primera navidad",
+      "description": "Un mes después llegaba nuestra primera navidad juntos, estaba emocionado por darte tus regalos, aunque me costo mucho envolver uno a uno lo hice con mucho cariño e ilusión. Desde que me dijiste que la navidad era especial para ti me esforze por darte lo mejor.",
+      "subTitle": "24 de diciembre del 2023"
+    },
+    {
+      "id": 12,
+      "image": "/images/timeline/hito-11.webp",
+      "title": "Primer año nuevo",
+      "description": "En definitiva el mejor año nuevo que me ha tocado vivir, y no es casualidad que sea a tu lado, fueron demasiados los picos de felicidad que senti a tu lado.",
+      "subTitle": "1 de enero del 2024"
+    },
+    {
+      "id": 13,
+      "image": "/images/timeline/hito-12.webp",
+      "title": "Hola Tequila",
+      "description": "Tu cara de felicidad al recibir a Tequila en tus manos no tiene precio, estoy muy agradeciado de haberte acompañado en ese momento, un día para recordar.",
+      "subTitle": "2 de febrero del 2024"
+    },
+    {
+      "id": 14,
+      "image": "/images/timeline/hito-13.webp",
+      "title": "Playa el Paraíso",
+      "description": "Estabas pasando un día triste y necesitabas de ese lugar especial que te ayuda a ordenar las ideas, a conectar contigo, a sanar. Afortunado me senti de acompañarte y conocer ese lugar especial para ti.",
+      "subTitle": "18 de febrero del 2024"
+    },
+    {
+      "id": 15,
+      "image": "/images/timeline/hito-14.webp",
+      "title": "Mi foto de favorita de ti",
+      "description": "Simplemente tú, captada por el lente del tefono de mi cara, no existen las palabras correctas con las que pueda explicar esta foto, me encantas nena.",
+      "subTitle": "14 de abril del 2024"
+    },
+    {
+      "id": 15,
+      "image": "/images/timeline/hito-15.webp",
+      "title": "Tu cumpleaños",
+      "description": "Otra fecha muy especial para ti, pensar en cada regalo, en cada detalle del día, en cada cosa que te puede hacer bien, que te puede gustar fue una gran misión. Creo que lo hice bien.",
+      "subTitle": "1 de julio del 2024"
+    },
+    {
+      "id": 15,
+      "image": "/images/timeline/hito-16.webp",
+      "title": "Primer viaje juntos",
+      "description": "Tumbados uno sobre el otro, cansados pero felices de visitar nuevos lugares juntos, de descubrirnos, de amarnos, de cuidarnos. Un viaje que recuerdo con cariño, y que disfrute muchisimo vivirlo contigo.",
+      "subTitle": "18 de agosto del 2024"
+    },
+    {
+      "id": 16,
+      "image": "/images/timeline/hito-17.webp",
+      "title": "Barranca",
+      "description": "Segundo año nuevo pasandole en Barranca, de camino a un lugar al que no pudimos llegar, las risas nos faltaron, muchas fotos tomamos, los besos a montones aparecieron, pero sobre todo tu y yo manejando en la ruta, en la trocha, no puedo pedir más.",
+      "subTitle": "29 de diciembre del 2024"
+    },
+    {
+      "id": 17,
+      "image": "/images/timeline/hito-18.webp",
+      "title": "La busqueda por Stitch",
+      "description": "En el cine a unos minutos de ver el Live Action de Stitch, después de luchar por esa palomera tan anhelada por ti, logré conseguirla, me di cuenta que valió todo el esfuerzo justo en el momento que vi tu rostro, mucho de las cosas que me esfuerzo por ti son para eso, tu retribución natural es dejarme ver tu sonrisa, admirar tu felicidad, estoy muy agradecido con eso.",
+      "subTitle": "22 de mayo del 2025"
+    },
+    {
+      "id": 18,
+      "image": "/images/timeline/hito-19.webp",
+      "title": "Día de arte",
+      "description": "Planeaste la mejor cita que hemos tenido, disfrute como un niño a tu lado, fui feliz, fui yo, todo gracias a ti mi vida, te amo. Pero lo que más ilusión me hace son todas las ilustraciones que usaremos de decoración en el hogar que formemos juntos.",
+      "subTitle": "24 de mayo del 2025"
     },
   ],
   "reportModalMenu": {

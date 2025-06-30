@@ -35,7 +35,7 @@ const TimelineItem = ({ image, title, subTitle, description, index }) => {
     <div
       ref={itemRef}
       className={`timelineItemContainer ${isVisible ? "timelineItemVisible" : ""}`}
-      style={{ "--animation-delay": `${(index * 0.2).toFixed(1)}s` }}
+      style={{ "--animation-delay": `${(index * 0.05).toFixed(1)}s` }}
     >
       <div className="timelineItemDot"></div>
       <div className="timelineItemContent">
