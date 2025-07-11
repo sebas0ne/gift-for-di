@@ -165,7 +165,7 @@ const constant =  {
   "itemsMenu": [
     { "label": 'INICIO', "path": '/' },
     { "label": 'COSAS QUE AMO DE TI', "path": '/thingsAboutYou' },
-    // { "label": 'POR QUÉ TE AMO?', "path": '/whyILoveYou' },
+    { "label": 'POR QUÉ TE AMO?', "path": '/whyILoveYou' },
     { "label": '¿NOS GUSTA EL CINE?', "path": '/movies' },
     { "label": 'UN POCO DE HISTORIA', "path": '/timeline' },
     { "label": 'LA RUTA DEL SABOR', "path": '/loveMenu' },
@@ -312,22 +312,22 @@ const constant =  {
     {
       "id": 2,
       "title": "Te amo porque me siento en casa contigo...",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "content": "Porque estar a tu lado es un sentimiento inigualable. Me siento en un refugio, me siento en casa. Disfrutar de tu compañía es algo que quiero hacer por el resto de mi vida, ese privilegío de pasar tiempo contigo, en cualquier tipo de situación, aunque sea en silencio mirandonos a los ojos es un sentimiento pleno, de paz y de alegría, siento que que somo tu y yo existiendo y el mundo observando nuestra felicidad, te amo por eso.",
     },
     {
       "id": 3,
       "title": "Te amo porque eres mi mejor amiga...",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "content": "Porque sabes cuando estoy feliz, triste, aburrido, preocupado, angustiado, ansioso y podría describir muchos estados de animo más. Cosas que con el tiempo fuiste aprendiendo, viendo, escuchando de mi, eso solo me hace pensar en lo mucho que te importo, lo mucho que te preocupas por mi y lo mucho que te importa estar pendiente de mi. Por esas miradas de complicidad que adoro y solo ambos sabemos lo que significan. Por esos momentos de risa y felicidad que pasamos por alguna broma o tontería que solo ambos disfrutamos. Por que la confianza que tenemos es tal que no tenemos miedo a ocultar cosas, a omitir algo de nuestro ser, solo somos y nos amamos así, te amo por eso.",
     },
     {
       "id": 4,
       "title": "Te amo porque me enseñas cada día...",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "content": "Porque a tu lado he aprendido tantas cosas y estoy seguro que lo seguiré haciendo. Amo esa parte de ti, que me enseña a crecer, a pensar en grande, a mejorar, a darme cuenta de cosas que en mi vida cotidiana normalizaba y ahora lo veo con otros ojos, todo gracias a ti y tu empeño en hacerme mejor hombre, mejor persona... te amo por eso.",
     },
     {
       "id": 5,
       "title": "Te amo porque eres única...",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "content": "Te amo porque eres única, eres diferente al resto, millones de personas en el mundo y tuve la oportunidad de conocerte, pero no solo eso de estar a tu lado y ser tu compañero de vida, vida que espero sea eterna y que aún en el más allá donde sea que sea te sostenga de la mano. Única porque actualmente en este mundo en el que el amor se volvió frágil y efímero, me brindaste algo fuerte y eterno. Luchare para que la vida me deje darte todo lo que mereces, porque alguién como tú merece lo mejor de la vida, lo mejor de la gente, lo mejor de mi, te amo por eso.",
     },
   ],
   "timeLinePage": "RECORDEMOS NUESTRA HISTORIA JUNTOS",
@@ -600,7 +600,7 @@ const constant =  {
       "id": 13,
       "name": "Jugo de naranja",
       "category": "Bebidas",
-      "image": "/images/menu/bebida-2.WEBP",
+      "image": "/images/menu/bebida-2.webp",
       "story":
         "Jugo de naranja de 16 oz sabor natural y vitaminas.",
       "rating": 0,
@@ -609,7 +609,7 @@ const constant =  {
       "id": 14,
       "name": "Manzana verde G/B Tea",
       "category": "Bebidas",
-      "image": "/images/menu/bebida-4.WEBP",
+      "image": "/images/menu/bebida-4.webp",
       "story":
         "Elaborados a base de té y zumo de fruta de manzana.",
       "rating": 0,
@@ -618,7 +618,7 @@ const constant =  {
       "id": 15,
       "name": "Mango G/B Tea",
       "category": "Bebidas",
-      "image": "/images/menu/bebida-5.WEBP",
+      "image": "/images/menu/bebida-5.webp",
       "story":
         "Elaborados a base de té y zumo de fruta de mango.",
       "rating": 0,
@@ -627,7 +627,7 @@ const constant =  {
       "id": 16,
       "name": "Mango dragon fruit",
       "category": "Bebidas",
-      "image": "/images/menu/bebida-3.WEBP",
+      "image": "/images/menu/bebida-3.webp",
       "story":
         "Bebida elaborada con concentrado de café verde sabor a mango, mezclado con pitahaya deshidratada.",
       "rating": 0,
